@@ -1,0 +1,155 @@
+/**
+ * Variables used across the blocks
+ */
+.prblocks-bet-calc {
+  background-color: #e5e9ef;
+  width: 100%;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  padding: 30px; }
+  .prblocks-bet-calc * {
+    box-sizing: border-box; }
+  .prblocks-bet-calc header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    border-bottom: 2px solid #d7d7d7;
+    padding-bottom: 20px; }
+    .prblocks-bet-calc header svg {
+      max-height: 24px;
+      max-width: 24px;
+      width: 24px;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+      margin: 0 15px 0 0; }
+    .prblocks-bet-calc header h4 {
+      font-size: 1rem;
+      line-height: 1.2;
+      -ms-flex: 1;
+          flex: 1;
+      margin: 0;
+      font-weight: normal;
+      color: #222; }
+  .prblocks-bet-calc label {
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #222; }
+  .prblocks-bet-calc :-ms-input-placeholder {
+    color: #999; }
+  .prblocks-bet-calc ::placeholder {
+    color: #999; }
+  .prblocks-bet-calc button,
+  .prblocks-bet-calc input,
+  .prblocks-bet-calc select {
+    border: 2px solid #d7d7d7;
+    font-size: 0.9rem;
+    padding: 5px 25px 5px 10px !important;
+    background-color: #fff;
+    color: #222;
+    outline: none !important; }
+  .prblocks-bet-calc select {
+    padding: 5px 25px 5px 10px !important; }
+  .prblocks-bet-calc input {
+    border: 2px solid #d7d7d7 !important;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px !important; }
+    .prblocks-bet-calc input.prblocks-bet-calc__odds-form-input--error {
+      border-color: #ff0000 !important; }
+  .prblocks-bet-calc__odds-format {
+    padding: 20px 0 30px 0;
+    text-align: right; }
+  .prblocks-bet-calc__odds-form-msg {
+    text-align: center;
+    font-size: 1rem;
+    color: #ff0000;
+    padding: 5px;
+    margin: 0 0 15px 0; }
+  .prblocks-bet-calc__odds-form {
+    max-width: 350px;
+    margin: 0 auto; }
+  .prblocks-bet-calc__odds-form-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin: 0 0 5px 0; }
+  .prblocks-bet-calc__odds-form-result div, .prblocks-bet-calc__odds-form-field {
+    width: calc((100% - 6px) / 2); }
+    .prblocks-bet-calc__odds-form-result div label,
+    .prblocks-bet-calc__odds-form-result div input, .prblocks-bet-calc__odds-form-field label,
+    .prblocks-bet-calc__odds-form-field input {
+      display: block;
+      text-align: center; }
+  .prblocks-bet-calc__odds-form-buttons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+    .prblocks-bet-calc__odds-form-buttons button {
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      transition: all 0.25s ease-in-out;
+      font-weight: bold; }
+      .prblocks-bet-calc__odds-form-buttons button svg {
+        max-width: none;
+        width: 24px;
+        height: auto;
+        display: block;
+        margin-right: 8%; }
+      .prblocks-bet-calc__odds-form-buttons button:not(.prblocks-bet-calc__odds-form-clear):hover {
+        background-color: #d7d7d7; }
+    .prblocks-bet-calc__odds-form-buttons .prblocks-bet-calc__odds-form-clear {
+      background-color: transparent;
+      border-color: transparent;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+      padding-right: 0 !important;
+      margin-top: 10px;
+      margin-left: auto;
+      width: auto !important;
+      text-transform: uppercase;
+      font-size: 0.8rem; }
+      .prblocks-bet-calc__odds-form-buttons .prblocks-bet-calc__odds-form-clear svg {
+        margin-right: 7px;
+        transition: fill 0.25s ease-in-out; }
+      .prblocks-bet-calc__odds-form-buttons .prblocks-bet-calc__odds-form-clear:hover svg {
+        fill: #ff0000; }
+  .prblocks-bet-calc__odds-form-result {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px; }
+    .prblocks-bet-calc__odds-form-result > span {
+      margin: 0 20px 0 0; }
+    .prblocks-bet-calc__odds-form-result div {
+      background-color: #000;
+      text-align: center;
+      color: #fff;
+      padding: 6px; }
+  @media all and (max-width: 767px) {
+    .prblocks-bet-calc {
+      max-width: 95% !important; }
+      .prblocks-bet-calc__odds-format {
+        max-width: 350px;
+        margin: 0 auto; } }

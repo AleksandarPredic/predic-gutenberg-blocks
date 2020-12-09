@@ -1,0 +1,193 @@
+@import "../../assets/scss/variables";
+
+.prblocks-bet-calc {
+  background-color:$background__blueish;
+  width: 100%;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  padding: 30px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 2px solid $border__grey;
+    padding-bottom: 20px;
+
+    svg {
+      max-height: 24px;
+      max-width: 24px;
+      width: 24px;
+      flex: 0 0 24px;
+      margin: 0 15px 0 0;
+    }
+
+    h4 {
+      font-size: 1rem;
+      line-height: 1.2;
+      flex: 1;
+      margin: 0;
+      font-weight: normal;
+      color: $color__text;
+    }
+  }
+
+  label {
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: bold;
+    color: $color__text;
+  }
+
+  ::placeholder {
+    color: $color__grey;
+  }
+
+  button,
+  input,
+  select {
+    border: 2px solid $border__grey;
+    font-size: 0.9rem;
+    padding: 5px 25px 5px 10px !important;
+    background-color: $color__white;
+    color: $color__text;
+    outline: none !important;
+  }
+
+  select {
+    padding: 5px 25px 5px 10px !important;
+  }
+
+  input {
+    border: 2px solid $border__grey !important;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px !important;
+
+    &.prblocks-bet-calc__odds-form-input--error {
+      border-color: $background__error !important;
+    }
+  }
+
+  &__odds-format {
+    padding: 20px 0 30px 0;
+    text-align: right;
+  }
+
+  &__odds-form-msg {
+    text-align: center;
+    font-size: 1rem;
+    color: $color__red;
+    padding: 5px;
+    margin: 0 0 15px 0;
+  }
+
+  &__odds-form {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  &__odds-form-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 0 5px 0;
+  }
+
+  &__odds-form-result div,
+  &__odds-form-field {
+    width: calc((100% - 6px) / 2);
+
+    label,
+    input {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__odds-form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease-in-out;
+      font-weight: bold;
+
+       svg {
+         max-width: none;
+         width: 24px;
+         height: auto;
+         display: block;
+         margin-right: 8%;
+       }
+
+      &:not(.prblocks-bet-calc__odds-form-clear):hover {
+        background-color: $color__grey-lite;
+      }
+    }
+
+    .prblocks-bet-calc__odds-form-clear {
+      background-color: transparent;
+      border-color: transparent;
+      justify-content: flex-end;
+      padding-right: 0 !important;
+      margin-top: 10px;
+      margin-left: auto;
+      width: auto !important;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+
+      svg {
+        margin-right: 7px;
+        transition: fill 0.25s ease-in-out;
+      }
+
+      &:hover {
+        svg {
+          fill: $color__red;
+        }
+      }
+    }
+  }
+
+  &__odds-form-result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+
+    > span {
+      margin: 0 20px 0 0;
+    }
+
+    div {
+      background-color: $color__black;
+      text-align: center;
+      color: $color__white;
+      padding: 6px;
+    }
+  }
+
+  @media all and (max-width: $brakepoint__md-max) {
+    max-width: 95% !important;
+
+    &__odds-format {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+}
+
+

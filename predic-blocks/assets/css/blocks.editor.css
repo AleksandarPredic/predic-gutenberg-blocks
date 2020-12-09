@@ -1,0 +1,13 @@
+/**
+ * Variables used across the blocks
+ */
+.block-editor-block-list__block .prblocks-bet-calc select {
+  border: 2px solid #d7d7d7 !important;
+  font-size: 0.9rem !important;
+  padding: 5px 25px 5px 10px !important;
+  background-color: #fff;
+  color: #222 !important;
+  outline: none !important; }
+
+.block-editor-block-list__block .prblocks-bet-calc__odds-form-field label {
+  margin-bottom: 10px; }

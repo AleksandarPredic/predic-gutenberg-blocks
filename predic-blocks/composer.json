@@ -1,0 +1,21 @@
+{
+  "name": "predic-blocks",
+  "description": "Gutenberg custom blocks",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Aleksandar Predic",
+      "email": "info@acapredic.com"
+    }
+  ],
+  "require": {
+    "php" : ">=7.2.0",
+    "ext-json" : "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PredicBlocks\\" : "src/"
+    }
+  }
+}
