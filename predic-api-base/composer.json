@@ -1,0 +1,21 @@
+{
+  "name": "predic-api-base",
+  "description": "Plugin to serve as API fetching and serving base",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Aleksandar Predic",
+      "email": "info@acapredic.com"
+    }
+  ],
+  "require": {
+    "php" : ">=7.2.0",
+    "ext-json" : "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PredicApiBase\\" : "src/"
+    }
+  }
+}

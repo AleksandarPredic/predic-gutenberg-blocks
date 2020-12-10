@@ -3,6 +3,7 @@
 namespace PredicBlocks\Blocks\Templates;
 
 use PredicBlocks\Contracts\Blocks\DynamicBlockTemplateInterface;
+use PredicBlocks\Helpers\LoggerHelper;
 use PredicBlocks\Traits\SingletonTrait;
 
 /**
@@ -17,10 +18,18 @@ class SportOddsTable implements DynamicBlockTemplateInterface
     use SingletonTrait;
 
     /**
+     * Logger
+     *
+     * @var LoggerHelper
+     */
+    private $logger;
+
+    /**
      * PredicBlocks constructor.
      */
     private function __construct()
     {
+        $this->logger = new LoggerHelper();
     }
 
     /**
@@ -55,6 +64,18 @@ class SportOddsTable implements DynamicBlockTemplateInterface
     {
         $class = isset($attributes['className']) ? $attributes['className'] : '';
 
-        return 'sports odds table';
+        // Fetch sports data from our central plugin
+
+        $apiData = apply_filters('predic_api_base_get_odds', 'uk', 'soccer_epl', 'h2h');
+
+        if (is_wp_error($apiData)) {
+            $this->logger->log(
+                $apiData->get_error_message(),
+                $apiData->get_error_code()
+            );
+            // TODO: What to do in case of error.
+        }
+
+        return 'sports odds table. REST success: ' . intval(isset($apiData['success']));
     }
 }

@@ -13,13 +13,14 @@
  * Domain Path: /languages
  */
 
-//  Exit if accessed directly.
 use PredicBlocks\PredicBlocks;
 
+//  Exit if accessed directly.
 defined( 'ABSPATH') || exit;
 
 define('PREDIC_BLOCKS_DIR', plugin_dir_path(__FILE__));
 define('PREDIC_BLOCKS_URL', plugin_dir_url( __FILE__ ));
+define('PREDIC_BLOCKS_DEBUG_LOG_ON', defined('WP_DEBUG_LOG') && WP_DEBUG_LOG);
 
 require PREDIC_BLOCKS_DIR . 'vendor/autoload.php';
 
