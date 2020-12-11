@@ -3,6 +3,7 @@
 namespace PredicApiBase\Services;
 
 use PredicApiBase\Contracts\ApiServiceInterface;
+use PredicApiBase\Data\Models\SettingsModel;
 use PredicApiBase\ValueObjects\ApiResponse;
 
 /**
@@ -13,7 +14,7 @@ use PredicApiBase\ValueObjects\ApiResponse;
 class RapidApiService implements ApiServiceInterface
 {
 
-    // TODO: Change this to half a day
+    // TODO: Change this to one hour
     protected const CACHE_DURATION = MONTH_IN_SECONDS;
 
     /**
@@ -22,14 +23,27 @@ class RapidApiService implements ApiServiceInterface
      */
     protected $productionUrl;
 
+    /**
+     * API key
+     * @var string
+     */
     protected $xRapidApiKey;
+
+    /**
+     * API host
+     * @var string
+     */
     protected $xRapidApiHost;
 
+    /**
+     * RapidApiService constructor.
+     */
     public function __construct()
     {
+        $model = SettingsModel::getInstance();
         $this->productionUrl = 'https://odds.p.rapidapi.com/v1/';
-        $this->xRapidApiKey = 'e88082ebe2msh9de52b60a6407afp18ee44jsnbbcadc104a4c';
-        $this->xRapidApiHost = 'odds.p.rapidapi.com';
+        $this->xRapidApiKey = $model->getApiKey();
+        $this->xRapidApiHost = $model->getApiHost();
     }
 
     /**

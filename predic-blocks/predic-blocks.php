@@ -16,10 +16,11 @@
 use PredicBlocks\PredicBlocks;
 
 //  Exit if accessed directly.
-defined( 'ABSPATH') || exit;
+defined('ABSPATH') || exit;
 
+define('PREDIC_BLOCKS_SLUG', 'predic-api-base');
 define('PREDIC_BLOCKS_DIR', plugin_dir_path(__FILE__));
-define('PREDIC_BLOCKS_URL', plugin_dir_url( __FILE__ ));
+define('PREDIC_BLOCKS_URL', plugin_dir_url(__FILE__));
 define('PREDIC_BLOCKS_DEBUG_LOG_ON', defined('WP_DEBUG_LOG') && WP_DEBUG_LOG);
 
 require PREDIC_BLOCKS_DIR . 'vendor/autoload.php';
