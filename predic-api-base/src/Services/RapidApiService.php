@@ -56,7 +56,7 @@ class RapidApiService implements ApiServiceInterface
     public function get(array $queryParams, $endpoint)
     {
         // Set cache key
-        $transientKey = '';
+        $transientKey = 'predic_api_base';
         if (! empty($queryParams)) {
             foreach ($queryParams as $key => $value) {
                 $transientKey .= sprintf('%s_%s-', $key, $value);
@@ -78,7 +78,7 @@ class RapidApiService implements ApiServiceInterface
             ),
             $this->productionUrl . $endpoint
         );
-
+;
         $response = wp_remote_get(
             $url,
             [

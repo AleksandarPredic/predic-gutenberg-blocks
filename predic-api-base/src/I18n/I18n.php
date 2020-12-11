@@ -14,7 +14,6 @@ defined('ABSPATH') || exit;
 
 /**
  * Class I18n
- * @package BCLinks\I18n
  */
 class I18n
 {

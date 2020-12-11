@@ -5,6 +5,7 @@ namespace PredicApiBase;
 use PredicApiBase\Admin\AdminSettingsPage;
 use PredicApiBase\Helpers\ApiNotWorkingNotice;
 use PredicApiBase\I18n\I18n;
+use PredicApiBase\Services\ApiOddsService;
 use PredicApiBase\Services\ApiSportsService;
 use PredicApiBase\Services\RapidApiService;
 use PredicApiBase\Traits\SingletonTrait;
@@ -34,11 +35,17 @@ class PredicApiBase
 
         // Global filters for other plugins to use
 
+        $apiService = new RapidApiService();
+
         /**
-         * Sports API service
+         * Odds API service for other plugins or themes
          */
-        $apiSports = new ApiSportsService(new RapidApiService());
-        add_filter('predic_api_base_get_odds', [$apiSports, 'getAll'], 1, 3);
+        add_filter('predic_api_base_get_odds', [new ApiOddsService($apiService), 'getAll'], 1, 3);
+
+        /**
+         * Sports API service for other plugins or themes
+         */
+        add_filter('predic_api_base_get_sports', [new ApiSportsService($apiService), 'getAll'], 1, 1);
 
         // Admin only
         if (! is_admin()) {

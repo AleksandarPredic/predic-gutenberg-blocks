@@ -2,16 +2,16 @@
 
 namespace PredicApiBase\Services;
 
+use PredicApiBase\Contracts\APIOddsCollectionInterface;
 use PredicApiBase\Contracts\ApiServiceInterface;
-use PredicApiBase\Contracts\APISportsCollectionInterface;
 
 /**
- * Class ApiSportsService
+ * Class ApiOddsService
  * @package PredicApiBase\Services
  */
-class ApiSportsService implements APISportsCollectionInterface
+class ApiOddsService implements APIOddsCollectionInterface
 {
-    private const ENDPOINT = 'sports';
+    private const ENDPOINT = 'odds';
 
     /**
      * API service object
@@ -20,7 +20,7 @@ class ApiSportsService implements APISportsCollectionInterface
     private $api;
 
     /**
-     * ApiSportsService constructor.
+     * ApiOddsService constructor.
      * @param APIServiceInterface $api
      */
     public function __construct(APIServiceInterface $api)
@@ -31,11 +31,22 @@ class ApiSportsService implements APISportsCollectionInterface
     /**
      * @inheritDoc
      */
-    public function getAll()
-    {
+    public function getAll(
+        $region,
+        $sport,
+        $market
+    ) {
+        $queryParams = [
+            'region' => sanitize_text_field($region),
+            'sport' => sanitize_text_field($sport),
+            'oddsFormat' => 'decimal',
+            'mkt' => sanitize_text_field($market),
+            'dateFormat' => 'iso',
+        ];
+
         try {
             $result = $this->api->get(
-                [],
+                $queryParams,
                 self::ENDPOINT
             )->getData();
         } catch (\Exception $e) {

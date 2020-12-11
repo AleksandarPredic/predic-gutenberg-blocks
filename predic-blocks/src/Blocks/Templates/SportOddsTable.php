@@ -66,16 +66,26 @@ class SportOddsTable implements DynamicBlockTemplateInterface
 
         // Fetch sports data from our central plugin
 
-        $apiData = apply_filters('predic_api_base_get_odds', 'uk', 'soccer_epl', 'h2h');
-
-        if (is_wp_error($apiData)) {
+        $apiOddsData = apply_filters('predic_api_base_get_odds', 'uk', 'soccer_epl', 'h2h');
+        if (is_wp_error($apiOddsData)) {
             $this->logger->log(
-                $apiData->get_error_message(),
-                $apiData->get_error_code()
+                $apiOddsData->get_error_message(),
+                $apiOddsData->get_error_code()
             );
             // TODO: What to do in case of error.
         }
 
-        return 'sports odds table. REST success: ' . intval(isset($apiData['success']));
+        $apiSportsData = apply_filters('predic_api_base_get_sports', null);
+        if (is_wp_error($apiSportsData)) {
+            $this->logger->log(
+                $apiSportsData->get_error_message(),
+                $apiSportsData->get_error_code()
+            );
+            // TODO: What to do in case of error.
+        }
+
+        return 'sports odds table.'
+            . '<br>REST odds success: ' . intval(isset($apiOddsData['success']))
+            . '<br>REST sports success: ' . intval(isset($apiSportsData['success']));
     }
 }
