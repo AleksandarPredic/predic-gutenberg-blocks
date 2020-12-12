@@ -80,7 +80,7 @@ export default class BetCalculator {
       sum.push(stakeOdd.stake * stakeOdd.odd);
     }
 
-    this.payout.innerText = sum.reduce((a, b) => a + b, 0).toFixed(2);
+    this.handlePayout(sum.reduce((a, b) => a + b, 0).toFixed(2));
   }
 
   /**
@@ -92,6 +92,9 @@ export default class BetCalculator {
 
     // reset message
     this.handleMessage('');
+
+    // reset payout
+    this.handlePayout('0.00');
 
     // reset inputs and remove error class
     formGroups[0].querySelectorAll('input')
@@ -210,7 +213,7 @@ export default class BetCalculator {
   }
 
   /**
-   * Mark input incoreect or not
+   * Mark input incorrect or not
    * @param {Object} input
    * @param {boolean} error
    */
@@ -220,5 +223,13 @@ export default class BetCalculator {
     } else {
       input.classList.remove(this.errorCssClass);
     }
+  }
+
+  /**
+   * Add or remove payot value
+   * @param {string} value
+   */
+  handlePayout(value) {
+    this.payout.innerText = value;
   }
 }
