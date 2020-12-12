@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables";
 
 .prblocks-bet-calc {
-  background-color:$background__blueish;
+  background-color: $background__blueish;
   width: 100%;
   max-width: 700px !important;
   margin: 0 auto !important;
@@ -123,13 +123,13 @@
       transition: all 0.25s ease-in-out;
       font-weight: bold;
 
-       svg {
-         max-width: none;
-         width: 24px;
-         height: auto;
-         display: block;
-         margin-right: 8%;
-       }
+      svg {
+        max-width: none;
+        width: 24px;
+        height: auto;
+        display: block;
+        margin-right: 8%;
+      }
 
       &:not(.prblocks-bet-calc__odds-form-clear):hover {
         background-color: $color__grey-lite;
@@ -189,5 +189,3 @@
     }
   }
 }
-
-

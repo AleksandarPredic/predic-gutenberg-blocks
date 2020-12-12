@@ -1,37 +1,46 @@
 const path = require( 'path' );
 const webpack = require( 'webpack' );
-const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const MiniCssExtractPluginBlocks = require('mini-css-extract-plugin');
+const MiniCssExtractPluginEditor = require('mini-css-extract-plugin');
 
-// Set different CSS extraction for editor only and common block styles
-const blocksCSSPlugin = new ExtractTextPlugin( {
-  filename: './assets/css/blocks.style.css',
-} );
-const editBlocksCSSPlugin = new ExtractTextPlugin( {
-  filename: './assets/css/blocks.editor.css',
-} );
+const production = 'production' === process.env.NODE_ENV;
 
-// Configuration for the ExtractTextPlugin.
-const extractConfig = {
-  use: [
-    { loader: 'raw-loader' },
-    {
-      loader: 'postcss-loader',
-      options: {
-        plugins: [ require( 'autoprefixer' ) ],
+const commonScssConfig = [
+  {
+    loader: "css-loader",
+    options: {
+      sourceMap: true,
+      minimize: production
+    }
+  },
+
+  {
+    loader: "postcss-loader",
+    options: {
+      ident: 'postcss',
+      sourceMap: true,
+      plugins: [
+        require('autoprefixer')({
+          'browsers': ['> 1%', 'last 2 versions']
+        }),
+      ],
+      minimize: production
+    }
+  },
+  { loader: "sass-loader",
+    options: {
+      sourceMap: true,
+      sassOptions: {
+        outputStyle: production ? 'compressed' : 'nested',
       },
-    },
-    {
-      loader: 'sass-loader',
-      query: {
-        outputStyle:
-          'production' === process.env.NODE_ENV ? 'compressed' : 'nested',
-      },
-    },
-  ],
-};
-
+    }
+  },
+];
 
 module.exports = {
+  mode: production ? 'production' : 'development',
   entry: {
     './assets/js/editor.blocks' : './blocks/index.js',
     './assets/js/frontend.blocks' : './blocks/frontend.js',
@@ -40,29 +49,51 @@ module.exports = {
     path: path.resolve( __dirname ),
     filename: '[name].js',
   },
-  watch: 'production' !== process.env.NODE_ENV,
-  devtool: 'cheap-eval-source-map',
+  watch: ! production,
+  // https://webpack.js.org/configuration/devtool/
+  devtool: production ? 'none' : 'inline-cheap-source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+          }
+        ],
       },
       {
         test: /style\.s?css$/,
-        use: blocksCSSPlugin.extract( extractConfig ),
+        use: [
+          MiniCssExtractPluginBlocks.loader,
+          ...commonScssConfig
+        ],
       },
       {
         test: /editor\.s?css$/,
-        use: editBlocksCSSPlugin.extract( extractConfig ),
+        use: [
+          MiniCssExtractPluginEditor.loader,
+          ...commonScssConfig
+        ],
       },
     ],
   },
   plugins: [
-    blocksCSSPlugin,
-    editBlocksCSSPlugin,
+    new MiniCssExtractPluginBlocks({
+      filename: './assets/css/blocks.style.css',
+    } ),
+    new MiniCssExtractPluginEditor({
+      filename: './assets/css/blocks.editor.css',
+    } ),
+    new ESLintPlugin({
+      overrideConfigFile: 'eslintrc.json',
+    }),
+    new StylelintPlugin({
+      configFile: 'stylelintrc.json',
+      files: [
+        './blocks/**/*.scss'
+      ]
+    })
   ],
 };
