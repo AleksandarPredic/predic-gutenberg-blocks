@@ -1,37 +1,21 @@
 .block-editor-block-list__block {
   .prblocks-odds-table {
-    &__match {
-      flex-direction: column;
-
-      &:not(:last-child) {
-        padding-bottom: 20px;
-      }
-    }
-
-    &__team {
-      flex: 0 0 100%;
-      width: 100%;
-      margin-bottom: 10px;
-
-      > div {
-        padding: 0;
-      }
-    }
-
-    &__odds {
-      flex: 0 0 100%;
-    }
-
     &__filters {
       form {
         div {
           margin-bottom: 5px;
-          flex: 0 0 100%;
-          text-align: right;
+          flex: 0 0 50%;
+          text-align: left;
+
+          &:last-child {
+            flex: 0 0 100%;
+            text-align: right;
+            margin-top: 10px;
+          }
         }
 
-        button {
-          pointer-events: none;
+        select {
+          width: 100%;
         }
       }
     }
