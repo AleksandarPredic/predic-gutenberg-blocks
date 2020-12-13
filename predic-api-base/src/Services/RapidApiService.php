@@ -78,7 +78,7 @@ class RapidApiService implements ApiServiceInterface
             ),
             $this->productionUrl . $endpoint
         );
-;
+
         $response = wp_remote_get(
             $url,
             [

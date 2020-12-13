@@ -18,6 +18,7 @@ use PredicApiBase\PredicApiBase;
 
 defined( 'ABSPATH') || exit;
 
+define('PREDIC_API_BASE_SLUG', 'predic-api-base');
 define('PREDIC_API_BASE_DIR', plugin_dir_path(__FILE__));
 
 require PREDIC_API_BASE_DIR . 'vendor/autoload.php';

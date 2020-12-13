@@ -1,13 +1,13 @@
 /**
  * Adds debounce effect
  *
- * @param {function} fn Callback to execute
- * @param {number} wait Time in miliseconds
+ * @param {Function} fn Callback to execute
+ * @param {number} wait Time in milliseconds
  */
 export default function debounce (fn, wait) {
-  let t
+  let t;
   return function () {
-    clearTimeout(t)
-    t = setTimeout(() => fn.apply(this, arguments), wait)
-  }
+    clearTimeout(t);
+    t = setTimeout(() => fn.apply(this, arguments), wait);
+  };
 }

@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,78 +79,258 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./blocks/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 26:
+/***/ "./blocks/bet-calculator/editor.scss":
+/*!*******************************************!*\
+  !*** ./blocks/bet-calculator/editor.scss ***!
+  \*******************************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__i18n_js__ = __webpack_require__(27);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__i18n_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__i18n_js__);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sports_odds_table__ = __webpack_require__(28);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bet_calculator__ = __webpack_require__(31);\n\n\n/**\n * Import blocks\n */\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjYuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvaW5kZXguanM/ODE5MyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCIuL2kxOG4uanNcIjtcblxuLyoqXG4gKiBJbXBvcnQgYmxvY2tzXG4gKi9cbmltcG9ydCBcIi4vc3BvcnRzLW9kZHMtdGFibGVcIjtcbmltcG9ydCBcIi4vYmV0LWNhbGN1bGF0b3JcIjtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL2Jsb2Nrcy9pbmRleC5qc1xuLy8gbW9kdWxlIGlkID0gMjZcbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///26\n");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
-/***/ 27:
+/***/ "./blocks/bet-calculator/icon.js":
+/*!***************************************!*\
+  !*** ./blocks/bet-calculator/icon.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var icon = wp.element.createElement(
+  "svg",
+  {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20px",
+    height: "20px",
+    viewBox: "0 0 24 24"
+  },
+  wp.element.createElement("path", { fill: "none", d: "M0 0H24V24H0z" }),
+  wp.element.createElement("path", { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.97 4.06L14.09 6l1.41 1.41L16.91 6l1.06 1.06-1.41 1.41 1.41 1.41-1.06 1.06-1.41-1.4-1.41 1.41-1.06-1.06 1.41-1.41-1.41-1.42zm-6.78.66h5v1.5h-5v-1.5zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.5 1.25h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z" })
+);
+
+/* harmony default export */ __webpack_exports__["default"] = (icon);
+
+/***/ }),
+
+/***/ "./blocks/bet-calculator/index.js":
+/*!****************************************!*\
+  !*** ./blocks/bet-calculator/index.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon */ "./blocks/bet-calculator/icon.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./blocks/bet-calculator/style.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./blocks/bet-calculator/editor.scss");
+/**
+ * Block dependencies
+ */
+
+
+
+
+/**
+ * Internal block libraries
+ */
+var __ = wp.i18n.__;
+var registerBlockType = wp.blocks.registerBlockType;
+var _wp = wp,
+    ServerSideRender = _wp.serverSideRender;
+
+var blockId = 'predicblocks/bet-calculator';
+
+registerBlockType(blockId, {
+  title: __('Bet calculator', 'predic-blocks'),
+  description: __('Calculate how much a bet returns for any given stake.', 'predic-blocks'),
+  icon: {
+    background: '#fbb34b',
+    src: _icon__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  category: 'widgets',
+  attributes: {},
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes;
+
+    return wp.element.createElement(ServerSideRender, {
+      block: blockId,
+      attributes: attributes
+    });
+  },
+  // end edit
+  save: function save() {
+    // Rendering in PHP
+    return null;
+  },
+
+  example: {
+    attributes: {
+      'preview': true
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./blocks/bet-calculator/style.scss":
+/*!******************************************!*\
+  !*** ./blocks/bet-calculator/style.scss ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./blocks/i18n.js":
+/*!************************!*\
+  !*** ./blocks/i18n.js ***!
+  \************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("wp.i18n.setLocaleData({ '': {} }, 'predic-blocks');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjcuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvaTE4bi5qcz9iNDE0Il0sInNvdXJjZXNDb250ZW50IjpbIndwLmkxOG4uc2V0TG9jYWxlRGF0YSh7ICcnOiB7fSB9LCAncHJlZGljLWJsb2NrcycpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vYmxvY2tzL2kxOG4uanNcbi8vIG1vZHVsZSBpZCA9IDI3XG4vLyBtb2R1bGUgY2h1bmtzID0gMSJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///27\n");
+wp.i18n.setLocaleData({ '': {} }, 'predic-blocks');
 
 /***/ }),
 
-/***/ 28:
+/***/ "./blocks/index.js":
+/*!*************************!*\
+  !*** ./blocks/index.js ***!
+  \*************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__icon__ = __webpack_require__(29);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss__ = __webpack_require__(30);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_scss__);\n/**\n * Block dependencies\n */\n\n\n\n/**\n * Internal block libraries\n */\nvar __ = wp.i18n.__;\nvar registerBlockType = wp.blocks.registerBlockType;\nvar _wp = wp,\n    ServerSideRender = _wp.serverSideRender;\n\nvar blockId = 'predicblocks/sports-odds-table';\n\nregisterBlockType(blockId, {\n  title: __('Sports odds table', 'predic-blocks'),\n  description: __('Shows odds for top 10 games of user’s choice from Live Sports Odds API.', 'predic-blocks'),\n  icon: {\n    background: '#fbb34b',\n    src: __WEBPACK_IMPORTED_MODULE_0__icon__[\"a\" /* default */]\n  },\n  category: 'widgets',\n  attributes: {},\n  edit: function edit(_ref) {\n    var attributes = _ref.attributes;\n\n    return wp.element.createElement(ServerSideRender, {\n      block: blockId,\n      attributes: attributes\n    });\n  },\n  // end edit\n  save: function save() {\n    // Rendering in PHP\n    return null;\n  }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjguanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3Mvc3BvcnRzLW9kZHMtdGFibGUvaW5kZXguanM/YjAyZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEJsb2NrIGRlcGVuZGVuY2llc1xuICovXG5pbXBvcnQgaWNvbiBmcm9tICcuL2ljb24nO1xuaW1wb3J0ICcuL3N0eWxlLnNjc3MnO1xuXG4vKipcbiAqIEludGVybmFsIGJsb2NrIGxpYnJhcmllc1xuICovXG52YXIgX18gPSB3cC5pMThuLl9fO1xudmFyIHJlZ2lzdGVyQmxvY2tUeXBlID0gd3AuYmxvY2tzLnJlZ2lzdGVyQmxvY2tUeXBlO1xudmFyIF93cCA9IHdwLFxuICAgIFNlcnZlclNpZGVSZW5kZXIgPSBfd3Auc2VydmVyU2lkZVJlbmRlcjtcblxudmFyIGJsb2NrSWQgPSAncHJlZGljYmxvY2tzL3Nwb3J0cy1vZGRzLXRhYmxlJztcblxucmVnaXN0ZXJCbG9ja1R5cGUoYmxvY2tJZCwge1xuICB0aXRsZTogX18oJ1Nwb3J0cyBvZGRzIHRhYmxlJywgJ3ByZWRpYy1ibG9ja3MnKSxcbiAgZGVzY3JpcHRpb246IF9fKCdTaG93cyBvZGRzIGZvciB0b3AgMTAgZ2FtZXMgb2YgdXNlcuKAmXMgY2hvaWNlIGZyb20gTGl2ZSBTcG9ydHMgT2RkcyBBUEkuJywgJ3ByZWRpYy1ibG9ja3MnKSxcbiAgaWNvbjoge1xuICAgIGJhY2tncm91bmQ6ICcjZmJiMzRiJyxcbiAgICBzcmM6IGljb25cbiAgfSxcbiAgY2F0ZWdvcnk6ICd3aWRnZXRzJyxcbiAgYXR0cmlidXRlczoge30sXG4gIGVkaXQ6IGZ1bmN0aW9uIGVkaXQoX3JlZikge1xuICAgIHZhciBhdHRyaWJ1dGVzID0gX3JlZi5hdHRyaWJ1dGVzO1xuXG4gICAgcmV0dXJuIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChTZXJ2ZXJTaWRlUmVuZGVyLCB7XG4gICAgICBibG9jazogYmxvY2tJZCxcbiAgICAgIGF0dHJpYnV0ZXM6IGF0dHJpYnV0ZXNcbiAgICB9KTtcbiAgfSxcbiAgLy8gZW5kIGVkaXRcbiAgc2F2ZTogZnVuY3Rpb24gc2F2ZSgpIHtcbiAgICAvLyBSZW5kZXJpbmcgaW4gUEhQXG4gICAgcmV0dXJuIG51bGw7XG4gIH1cbn0pO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vYmxvY2tzL3Nwb3J0cy1vZGRzLXRhYmxlL2luZGV4LmpzXG4vLyBtb2R1bGUgaWQgPSAyOFxuLy8gbW9kdWxlIGNodW5rcyA9IDEiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///28\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _i18n_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n.js */ "./blocks/i18n.js");
+/* harmony import */ var _i18n_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_i18n_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _sports_odds_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sports-odds-table */ "./blocks/sports-odds-table/index.js");
+/* harmony import */ var _bet_calculator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bet-calculator */ "./blocks/bet-calculator/index.js");
+
+
+/**
+ * Import blocks
+ */
+
+
 
 /***/ }),
 
-/***/ 29:
+/***/ "./blocks/sports-odds-table/icon.js":
+/*!******************************************!*\
+  !*** ./blocks/sports-odds-table/icon.js ***!
+  \******************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("var icon = wp.element.createElement(\n  \"svg\",\n  {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    width: \"20px\",\n    height: \"20px\",\n    viewBox: \"0 0 24 24\"\n  },\n  wp.element.createElement(\"path\", { fill: \"none\", d: \"M0 0H24V24H0z\" }),\n  wp.element.createElement(\"path\", { d: \"M19 7H9c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 2v2H9V9h10zm-6 6v-2h2v2h-2zm2 2v2h-2v-2h2zm-4-2H9v-2h2v2zm6-2h2v2h-2v-2zm-8 4h2v2H9v-2zm8 2v-2h2v2h-2zM6 17H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v1h-2V5H5v10h1v2z\" })\n);\n\n/* harmony default export */ __webpack_exports__[\"a\"] = (icon);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjkuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3Mvc3BvcnRzLW9kZHMtdGFibGUvaWNvbi5qcz9hYzgxIl0sInNvdXJjZXNDb250ZW50IjpbInZhciBpY29uID0gd3AuZWxlbWVudC5jcmVhdGVFbGVtZW50KFxuICBcInN2Z1wiLFxuICB7XG4gICAgeG1sbnM6IFwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIixcbiAgICB3aWR0aDogXCIyMHB4XCIsXG4gICAgaGVpZ2h0OiBcIjIwcHhcIixcbiAgICB2aWV3Qm94OiBcIjAgMCAyNCAyNFwiXG4gIH0sXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBmaWxsOiBcIm5vbmVcIiwgZDogXCJNMCAwSDI0VjI0SDB6XCIgfSksXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBkOiBcIk0xOSA3SDljLTEuMSAwLTIgLjktMiAydjEwYzAgMS4xLjkgMiAyIDJoMTBjMS4xIDAgMi0uOSAyLTJWOWMwLTEuMS0uOS0yLTItMnptMCAydjJIOVY5aDEwem0tNiA2di0yaDJ2MmgtMnptMiAydjJoLTJ2LTJoMnptLTQtMkg5di0yaDJ2MnptNi0yaDJ2MmgtMnYtMnptLTggNGgydjJIOXYtMnptOCAydi0yaDJ2MmgtMnpNNiAxN0g1Yy0xLjEgMC0yLS45LTItMlY1YzAtMS4xLjktMiAyLTJoMTBjMS4xIDAgMiAuOSAyIDJ2MWgtMlY1SDV2MTBoMXYyelwiIH0pXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBpY29uO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vYmxvY2tzL3Nwb3J0cy1vZGRzLXRhYmxlL2ljb24uanNcbi8vIG1vZHVsZSBpZCA9IDI5XG4vLyBtb2R1bGUgY2h1bmtzID0gMSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///29\n");
+__webpack_require__.r(__webpack_exports__);
+var icon = wp.element.createElement(
+  "svg",
+  {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20px",
+    height: "20px",
+    viewBox: "0 0 24 24"
+  },
+  wp.element.createElement("path", { fill: "none", d: "M0 0H24V24H0z" }),
+  wp.element.createElement("path", { d: "M19 7H9c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 2v2H9V9h10zm-6 6v-2h2v2h-2zm2 2v2h-2v-2h2zm-4-2H9v-2h2v2zm6-2h2v2h-2v-2zm-8 4h2v2H9v-2zm8 2v-2h2v2h-2zM6 17H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v1h-2V5H5v10h1v2z" })
+);
+
+/* harmony default export */ __webpack_exports__["default"] = (icon);
 
 /***/ }),
 
-/***/ 30:
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3Mvc3BvcnRzLW9kZHMtdGFibGUvc3R5bGUuc2Nzcz8zMWZiIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luXG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9ibG9ja3Mvc3BvcnRzLW9kZHMtdGFibGUvc3R5bGUuc2Nzc1xuLy8gbW9kdWxlIGlkID0gMzBcbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///30\n");
-
-/***/ }),
-
-/***/ 31:
+/***/ "./blocks/sports-odds-table/index.js":
+/*!*******************************************!*\
+  !*** ./blocks/sports-odds-table/index.js ***!
+  \*******************************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__icon__ = __webpack_require__(32);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss__ = __webpack_require__(33);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_scss__);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__editor_scss__ = __webpack_require__(34);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__editor_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__editor_scss__);\n/**\n * Block dependencies\n */\n\n\n\n\n/**\n * Internal block libraries\n */\nvar __ = wp.i18n.__;\nvar registerBlockType = wp.blocks.registerBlockType;\nvar _wp = wp,\n    ServerSideRender = _wp.serverSideRender;\n\nvar blockId = 'predicblocks/bet-calculator';\n\nregisterBlockType(blockId, {\n  title: __('Bet calculator', 'predic-blocks'),\n  description: __('Calculate how much a bet returns for any given stake.', 'predic-blocks'),\n  icon: {\n    background: '#fbb34b',\n    src: __WEBPACK_IMPORTED_MODULE_0__icon__[\"a\" /* default */]\n  },\n  category: 'widgets',\n  attributes: {},\n  edit: function edit(_ref) {\n    var attributes = _ref.attributes;\n\n    return wp.element.createElement(ServerSideRender, {\n      block: blockId,\n      attributes: attributes\n    });\n  },\n  // end edit\n  save: function save() {\n    // Rendering in PHP\n    return null;\n  }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzEuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaW5kZXguanM/ZjNmMCJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEJsb2NrIGRlcGVuZGVuY2llc1xuICovXG5pbXBvcnQgaWNvbiBmcm9tICcuL2ljb24nO1xuaW1wb3J0ICcuL3N0eWxlLnNjc3MnO1xuaW1wb3J0ICcuL2VkaXRvci5zY3NzJztcblxuLyoqXG4gKiBJbnRlcm5hbCBibG9jayBsaWJyYXJpZXNcbiAqL1xudmFyIF9fID0gd3AuaTE4bi5fXztcbnZhciByZWdpc3RlckJsb2NrVHlwZSA9IHdwLmJsb2Nrcy5yZWdpc3RlckJsb2NrVHlwZTtcbnZhciBfd3AgPSB3cCxcbiAgICBTZXJ2ZXJTaWRlUmVuZGVyID0gX3dwLnNlcnZlclNpZGVSZW5kZXI7XG5cbnZhciBibG9ja0lkID0gJ3ByZWRpY2Jsb2Nrcy9iZXQtY2FsY3VsYXRvcic7XG5cbnJlZ2lzdGVyQmxvY2tUeXBlKGJsb2NrSWQsIHtcbiAgdGl0bGU6IF9fKCdCZXQgY2FsY3VsYXRvcicsICdwcmVkaWMtYmxvY2tzJyksXG4gIGRlc2NyaXB0aW9uOiBfXygnQ2FsY3VsYXRlIGhvdyBtdWNoIGEgYmV0IHJldHVybnMgZm9yIGFueSBnaXZlbiBzdGFrZS4nLCAncHJlZGljLWJsb2NrcycpLFxuICBpY29uOiB7XG4gICAgYmFja2dyb3VuZDogJyNmYmIzNGInLFxuICAgIHNyYzogaWNvblxuICB9LFxuICBjYXRlZ29yeTogJ3dpZGdldHMnLFxuICBhdHRyaWJ1dGVzOiB7fSxcbiAgZWRpdDogZnVuY3Rpb24gZWRpdChfcmVmKSB7XG4gICAgdmFyIGF0dHJpYnV0ZXMgPSBfcmVmLmF0dHJpYnV0ZXM7XG5cbiAgICByZXR1cm4gd3AuZWxlbWVudC5jcmVhdGVFbGVtZW50KFNlcnZlclNpZGVSZW5kZXIsIHtcbiAgICAgIGJsb2NrOiBibG9ja0lkLFxuICAgICAgYXR0cmlidXRlczogYXR0cmlidXRlc1xuICAgIH0pO1xuICB9LFxuICAvLyBlbmQgZWRpdFxuICBzYXZlOiBmdW5jdGlvbiBzYXZlKCkge1xuICAgIC8vIFJlbmRlcmluZyBpbiBQSFBcbiAgICByZXR1cm4gbnVsbDtcbiAgfVxufSk7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaW5kZXguanNcbi8vIG1vZHVsZSBpZCA9IDMxXG4vLyBtb2R1bGUgY2h1bmtzID0gMSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///31\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon */ "./blocks/sports-odds-table/icon.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./blocks/sports-odds-table/style.scss");
+/**
+ * Block dependencies
+ */
+
+
+
+/**
+ * Internal block libraries
+ */
+var __ = wp.i18n.__;
+var registerBlockType = wp.blocks.registerBlockType;
+var _wp = wp,
+    ServerSideRender = _wp.serverSideRender;
+
+var blockId = 'predicblocks/sports-odds-table';
+
+registerBlockType(blockId, {
+  title: __('Sports odds table', 'predic-blocks'),
+  description: __('Shows odds for top 10 games of user’s choice from Live Sports Odds API.', 'predic-blocks'),
+  icon: {
+    background: '#fbb34b',
+    src: _icon__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  category: 'widgets',
+  attributes: {},
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes;
+
+    return wp.element.createElement(ServerSideRender, {
+      block: blockId,
+      attributes: attributes
+    });
+  },
+  // end edit
+  save: function save() {
+    // Rendering in PHP
+    return null;
+  },
+
+  example: {
+    attributes: {
+      'preview': true
+    }
+  }
+});
 
 /***/ }),
 
-/***/ 32:
+/***/ "./blocks/sports-odds-table/style.scss":
+/*!*********************************************!*\
+  !*** ./blocks/sports-odds-table/style.scss ***!
+  \*********************************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("var icon = wp.element.createElement(\n  \"svg\",\n  {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    width: \"20px\",\n    height: \"20px\",\n    viewBox: \"0 0 24 24\"\n  },\n  wp.element.createElement(\"path\", { fill: \"none\", d: \"M0 0H24V24H0z\" }),\n  wp.element.createElement(\"path\", { d: \"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.97 4.06L14.09 6l1.41 1.41L16.91 6l1.06 1.06-1.41 1.41 1.41 1.41-1.06 1.06-1.41-1.4-1.41 1.41-1.06-1.06 1.41-1.41-1.41-1.42zm-6.78.66h5v1.5h-5v-1.5zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.5 1.25h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z\" })\n);\n\n/* harmony default export */ __webpack_exports__[\"a\"] = (icon);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaWNvbi5qcz84Yzc2Il0sInNvdXJjZXNDb250ZW50IjpbInZhciBpY29uID0gd3AuZWxlbWVudC5jcmVhdGVFbGVtZW50KFxuICBcInN2Z1wiLFxuICB7XG4gICAgeG1sbnM6IFwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIixcbiAgICB3aWR0aDogXCIyMHB4XCIsXG4gICAgaGVpZ2h0OiBcIjIwcHhcIixcbiAgICB2aWV3Qm94OiBcIjAgMCAyNCAyNFwiXG4gIH0sXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBmaWxsOiBcIm5vbmVcIiwgZDogXCJNMCAwSDI0VjI0SDB6XCIgfSksXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBkOiBcIk0xOSAzSDVjLTEuMSAwLTIgLjktMiAydjE0YzAgMS4xLjkgMiAyIDJoMTRjMS4xIDAgMi0uOSAyLTJWNWMwLTEuMS0uOS0yLTItMnptLTUuOTcgNC4wNkwxNC4wOSA2bDEuNDEgMS40MUwxNi45MSA2bDEuMDYgMS4wNi0xLjQxIDEuNDEgMS40MSAxLjQxLTEuMDYgMS4wNi0xLjQxLTEuNC0xLjQxIDEuNDEtMS4wNi0xLjA2IDEuNDEtMS40MS0xLjQxLTEuNDJ6bS02Ljc4LjY2aDV2MS41aC01di0xLjV6TTExLjUgMTZoLTJ2Mkg4di0ySDZ2LTEuNWgydi0yaDEuNXYyaDJWMTZ6bTYuNSAxLjI1aC01di0xLjVoNXYxLjV6bTAtMi41aC01di0xLjVoNXYxLjV6XCIgfSlcbik7XG5cbmV4cG9ydCBkZWZhdWx0IGljb247XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaWNvbi5qc1xuLy8gbW9kdWxlIGlkID0gMzJcbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///32\n");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
-/***/ }),
-
-/***/ 33:
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3Ivc3R5bGUuc2Nzcz9iNGJiIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luXG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3Ivc3R5bGUuc2Nzc1xuLy8gbW9kdWxlIGlkID0gMzNcbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///33\n");
-
-/***/ }),
-
-/***/ 34:
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzQuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvZWRpdG9yLnNjc3M/N2Q1NCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vYmxvY2tzL2JldC1jYWxjdWxhdG9yL2VkaXRvci5zY3NzXG4vLyBtb2R1bGUgaWQgPSAzNFxuLy8gbW9kdWxlIGNodW5rcyA9IDEiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///34\n");
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hc3NldHMvanMvZWRpdG9yLmJsb2Nrcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy93ZWJwYWNrL2Jvb3RzdHJhcCIsIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvZWRpdG9yLnNjc3M/NmNjNiIsIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaWNvbi5qcyIsIndlYnBhY2s6Ly8vLi9ibG9ja3MvYmV0LWNhbGN1bGF0b3IvaW5kZXguanMiLCJ3ZWJwYWNrOi8vLy4vYmxvY2tzL2JldC1jYWxjdWxhdG9yL3N0eWxlLnNjc3M/OTc1NSIsIndlYnBhY2s6Ly8vLi9ibG9ja3MvaTE4bi5qcyIsIndlYnBhY2s6Ly8vLi9ibG9ja3MvaW5kZXguanMiLCJ3ZWJwYWNrOi8vLy4vYmxvY2tzL3Nwb3J0cy1vZGRzLXRhYmxlL2ljb24uanMiLCJ3ZWJwYWNrOi8vLy4vYmxvY2tzL3Nwb3J0cy1vZGRzLXRhYmxlL2luZGV4LmpzIiwid2VicGFjazovLy8uL2Jsb2Nrcy9zcG9ydHMtb2Rkcy10YWJsZS9zdHlsZS5zY3NzP2UxNmYiXSwic291cmNlc0NvbnRlbnQiOlsiIFx0Ly8gVGhlIG1vZHVsZSBjYWNoZVxuIFx0dmFyIGluc3RhbGxlZE1vZHVsZXMgPSB7fTtcblxuIFx0Ly8gVGhlIHJlcXVpcmUgZnVuY3Rpb25cbiBcdGZ1bmN0aW9uIF9fd2VicGFja19yZXF1aXJlX18obW9kdWxlSWQpIHtcblxuIFx0XHQvLyBDaGVjayBpZiBtb2R1bGUgaXMgaW4gY2FjaGVcbiBcdFx0aWYoaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0pIHtcbiBcdFx0XHRyZXR1cm4gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0uZXhwb3J0cztcbiBcdFx0fVxuIFx0XHQvLyBDcmVhdGUgYSBuZXcgbW9kdWxlIChhbmQgcHV0IGl0IGludG8gdGhlIGNhY2hlKVxuIFx0XHR2YXIgbW9kdWxlID0gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0gPSB7XG4gXHRcdFx0aTogbW9kdWxlSWQsXG4gXHRcdFx0bDogZmFsc2UsXG4gXHRcdFx0ZXhwb3J0czoge31cbiBcdFx0fTtcblxuIFx0XHQvLyBFeGVjdXRlIHRoZSBtb2R1bGUgZnVuY3Rpb25cbiBcdFx0bW9kdWxlc1ttb2R1bGVJZF0uY2FsbChtb2R1bGUuZXhwb3J0cywgbW9kdWxlLCBtb2R1bGUuZXhwb3J0cywgX193ZWJwYWNrX3JlcXVpcmVfXyk7XG5cbiBcdFx0Ly8gRmxhZyB0aGUgbW9kdWxlIGFzIGxvYWRlZFxuIFx0XHRtb2R1bGUubCA9IHRydWU7XG5cbiBcdFx0Ly8gUmV0dXJuIHRoZSBleHBvcnRzIG9mIHRoZSBtb2R1bGVcbiBcdFx0cmV0dXJuIG1vZHVsZS5leHBvcnRzO1xuIFx0fVxuXG5cbiBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlcyBvYmplY3QgKF9fd2VicGFja19tb2R1bGVzX18pXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm0gPSBtb2R1bGVzO1xuXG4gXHQvLyBleHBvc2UgdGhlIG1vZHVsZSBjYWNoZVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5jID0gaW5zdGFsbGVkTW9kdWxlcztcblxuIFx0Ly8gZGVmaW5lIGdldHRlciBmdW5jdGlvbiBmb3IgaGFybW9ueSBleHBvcnRzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLmQgPSBmdW5jdGlvbihleHBvcnRzLCBuYW1lLCBnZXR0ZXIpIHtcbiBcdFx0aWYoIV9fd2VicGFja19yZXF1aXJlX18ubyhleHBvcnRzLCBuYW1lKSkge1xuIFx0XHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBuYW1lLCB7IGVudW1lcmFibGU6IHRydWUsIGdldDogZ2V0dGVyIH0pO1xuIFx0XHR9XG4gXHR9O1xuXG4gXHQvLyBkZWZpbmUgX19lc01vZHVsZSBvbiBleHBvcnRzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLnIgPSBmdW5jdGlvbihleHBvcnRzKSB7XG4gXHRcdGlmKHR5cGVvZiBTeW1ib2wgIT09ICd1bmRlZmluZWQnICYmIFN5bWJvbC50b1N0cmluZ1RhZykge1xuIFx0XHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBTeW1ib2wudG9TdHJpbmdUYWcsIHsgdmFsdWU6ICdNb2R1bGUnIH0pO1xuIFx0XHR9XG4gXHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCAnX19lc01vZHVsZScsIHsgdmFsdWU6IHRydWUgfSk7XG4gXHR9O1xuXG4gXHQvLyBjcmVhdGUgYSBmYWtlIG5hbWVzcGFjZSBvYmplY3RcbiBcdC8vIG1vZGUgJiAxOiB2YWx1ZSBpcyBhIG1vZHVsZSBpZCwgcmVxdWlyZSBpdFxuIFx0Ly8gbW9kZSAmIDI6IG1lcmdlIGFsbCBwcm9wZXJ0aWVzIG9mIHZhbHVlIGludG8gdGhlIG5zXG4gXHQvLyBtb2RlICYgNDogcmV0dXJuIHZhbHVlIHdoZW4gYWxyZWFkeSBucyBvYmplY3RcbiBcdC8vIG1vZGUgJiA4fDE6IGJlaGF2ZSBsaWtlIHJlcXVpcmVcbiBcdF9fd2VicGFja19yZXF1aXJlX18udCA9IGZ1bmN0aW9uKHZhbHVlLCBtb2RlKSB7XG4gXHRcdGlmKG1vZGUgJiAxKSB2YWx1ZSA9IF9fd2VicGFja19yZXF1aXJlX18odmFsdWUpO1xuIFx0XHRpZihtb2RlICYgOCkgcmV0dXJuIHZhbHVlO1xuIFx0XHRpZigobW9kZSAmIDQpICYmIHR5cGVvZiB2YWx1ZSA9PT0gJ29iamVjdCcgJiYgdmFsdWUgJiYgdmFsdWUuX19lc01vZHVsZSkgcmV0dXJuIHZhbHVlO1xuIFx0XHR2YXIgbnMgPSBPYmplY3QuY3JlYXRlKG51bGwpO1xuIFx0XHRfX3dlYnBhY2tfcmVxdWlyZV9fLnIobnMpO1xuIFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkobnMsICdkZWZhdWx0JywgeyBlbnVtZXJhYmxlOiB0cnVlLCB2YWx1ZTogdmFsdWUgfSk7XG4gXHRcdGlmKG1vZGUgJiAyICYmIHR5cGVvZiB2YWx1ZSAhPSAnc3RyaW5nJykgZm9yKHZhciBrZXkgaW4gdmFsdWUpIF9fd2VicGFja19yZXF1aXJlX18uZChucywga2V5LCBmdW5jdGlvbihrZXkpIHsgcmV0dXJuIHZhbHVlW2tleV07IH0uYmluZChudWxsLCBrZXkpKTtcbiBcdFx0cmV0dXJuIG5zO1xuIFx0fTtcblxuIFx0Ly8gZ2V0RGVmYXVsdEV4cG9ydCBmdW5jdGlvbiBmb3IgY29tcGF0aWJpbGl0eSB3aXRoIG5vbi1oYXJtb255IG1vZHVsZXNcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubiA9IGZ1bmN0aW9uKG1vZHVsZSkge1xuIFx0XHR2YXIgZ2V0dGVyID0gbW9kdWxlICYmIG1vZHVsZS5fX2VzTW9kdWxlID9cbiBcdFx0XHRmdW5jdGlvbiBnZXREZWZhdWx0KCkgeyByZXR1cm4gbW9kdWxlWydkZWZhdWx0J107IH0gOlxuIFx0XHRcdGZ1bmN0aW9uIGdldE1vZHVsZUV4cG9ydHMoKSB7IHJldHVybiBtb2R1bGU7IH07XG4gXHRcdF9fd2VicGFja19yZXF1aXJlX18uZChnZXR0ZXIsICdhJywgZ2V0dGVyKTtcbiBcdFx0cmV0dXJuIGdldHRlcjtcbiBcdH07XG5cbiBcdC8vIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbFxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5vID0gZnVuY3Rpb24ob2JqZWN0LCBwcm9wZXJ0eSkgeyByZXR1cm4gT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKG9iamVjdCwgcHJvcGVydHkpOyB9O1xuXG4gXHQvLyBfX3dlYnBhY2tfcHVibGljX3BhdGhfX1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5wID0gXCJcIjtcblxuXG4gXHQvLyBMb2FkIGVudHJ5IG1vZHVsZSBhbmQgcmV0dXJuIGV4cG9ydHNcbiBcdHJldHVybiBfX3dlYnBhY2tfcmVxdWlyZV9fKF9fd2VicGFja19yZXF1aXJlX18ucyA9IFwiLi9ibG9ja3MvaW5kZXguanNcIik7XG4iLCIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiLCJ2YXIgaWNvbiA9IHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcbiAgXCJzdmdcIixcbiAge1xuICAgIHhtbG5zOiBcImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIsXG4gICAgd2lkdGg6IFwiMjBweFwiLFxuICAgIGhlaWdodDogXCIyMHB4XCIsXG4gICAgdmlld0JveDogXCIwIDAgMjQgMjRcIlxuICB9LFxuICB3cC5lbGVtZW50LmNyZWF0ZUVsZW1lbnQoXCJwYXRoXCIsIHsgZmlsbDogXCJub25lXCIsIGQ6IFwiTTAgMEgyNFYyNEgwelwiIH0pLFxuICB3cC5lbGVtZW50LmNyZWF0ZUVsZW1lbnQoXCJwYXRoXCIsIHsgZDogXCJNMTkgM0g1Yy0xLjEgMC0yIC45LTIgMnYxNGMwIDEuMS45IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bS01Ljk3IDQuMDZMMTQuMDkgNmwxLjQxIDEuNDFMMTYuOTEgNmwxLjA2IDEuMDYtMS40MSAxLjQxIDEuNDEgMS40MS0xLjA2IDEuMDYtMS40MS0xLjQtMS40MSAxLjQxLTEuMDYtMS4wNiAxLjQxLTEuNDEtMS40MS0xLjQyem0tNi43OC42Nmg1djEuNWgtNXYtMS41ek0xMS41IDE2aC0ydjJIOHYtMkg2di0xLjVoMnYtMmgxLjV2MmgyVjE2em02LjUgMS4yNWgtNXYtMS41aDV2MS41em0wLTIuNWgtNXYtMS41aDV2MS41elwiIH0pXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBpY29uOyIsIi8qKlxuICogQmxvY2sgZGVwZW5kZW5jaWVzXG4gKi9cbmltcG9ydCBpY29uIGZyb20gJy4vaWNvbic7XG5pbXBvcnQgJy4vc3R5bGUuc2Nzcyc7XG5pbXBvcnQgJy4vZWRpdG9yLnNjc3MnO1xuXG4vKipcbiAqIEludGVybmFsIGJsb2NrIGxpYnJhcmllc1xuICovXG52YXIgX18gPSB3cC5pMThuLl9fO1xudmFyIHJlZ2lzdGVyQmxvY2tUeXBlID0gd3AuYmxvY2tzLnJlZ2lzdGVyQmxvY2tUeXBlO1xudmFyIF93cCA9IHdwLFxuICAgIFNlcnZlclNpZGVSZW5kZXIgPSBfd3Auc2VydmVyU2lkZVJlbmRlcjtcblxudmFyIGJsb2NrSWQgPSAncHJlZGljYmxvY2tzL2JldC1jYWxjdWxhdG9yJztcblxucmVnaXN0ZXJCbG9ja1R5cGUoYmxvY2tJZCwge1xuICB0aXRsZTogX18oJ0JldCBjYWxjdWxhdG9yJywgJ3ByZWRpYy1ibG9ja3MnKSxcbiAgZGVzY3JpcHRpb246IF9fKCdDYWxjdWxhdGUgaG93IG11Y2ggYSBiZXQgcmV0dXJucyBmb3IgYW55IGdpdmVuIHN0YWtlLicsICdwcmVkaWMtYmxvY2tzJyksXG4gIGljb246IHtcbiAgICBiYWNrZ3JvdW5kOiAnI2ZiYjM0YicsXG4gICAgc3JjOiBpY29uXG4gIH0sXG4gIGNhdGVnb3J5OiAnd2lkZ2V0cycsXG4gIGF0dHJpYnV0ZXM6IHt9LFxuICBlZGl0OiBmdW5jdGlvbiBlZGl0KF9yZWYpIHtcbiAgICB2YXIgYXR0cmlidXRlcyA9IF9yZWYuYXR0cmlidXRlcztcblxuICAgIHJldHVybiB3cC5lbGVtZW50LmNyZWF0ZUVsZW1lbnQoU2VydmVyU2lkZVJlbmRlciwge1xuICAgICAgYmxvY2s6IGJsb2NrSWQsXG4gICAgICBhdHRyaWJ1dGVzOiBhdHRyaWJ1dGVzXG4gICAgfSk7XG4gIH0sXG4gIC8vIGVuZCBlZGl0XG4gIHNhdmU6IGZ1bmN0aW9uIHNhdmUoKSB7XG4gICAgLy8gUmVuZGVyaW5nIGluIFBIUFxuICAgIHJldHVybiBudWxsO1xuICB9LFxuXG4gIGV4YW1wbGU6IHtcbiAgICBhdHRyaWJ1dGVzOiB7XG4gICAgICAncHJldmlldyc6IHRydWVcbiAgICB9XG4gIH1cbn0pOyIsIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyIsIndwLmkxOG4uc2V0TG9jYWxlRGF0YSh7ICcnOiB7fSB9LCAncHJlZGljLWJsb2NrcycpOyIsImltcG9ydCBcIi4vaTE4bi5qc1wiO1xuXG4vKipcbiAqIEltcG9ydCBibG9ja3NcbiAqL1xuaW1wb3J0IFwiLi9zcG9ydHMtb2Rkcy10YWJsZVwiO1xuaW1wb3J0IFwiLi9iZXQtY2FsY3VsYXRvclwiOyIsInZhciBpY29uID0gd3AuZWxlbWVudC5jcmVhdGVFbGVtZW50KFxuICBcInN2Z1wiLFxuICB7XG4gICAgeG1sbnM6IFwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIixcbiAgICB3aWR0aDogXCIyMHB4XCIsXG4gICAgaGVpZ2h0OiBcIjIwcHhcIixcbiAgICB2aWV3Qm94OiBcIjAgMCAyNCAyNFwiXG4gIH0sXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBmaWxsOiBcIm5vbmVcIiwgZDogXCJNMCAwSDI0VjI0SDB6XCIgfSksXG4gIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBhdGhcIiwgeyBkOiBcIk0xOSA3SDljLTEuMSAwLTIgLjktMiAydjEwYzAgMS4xLjkgMiAyIDJoMTBjMS4xIDAgMi0uOSAyLTJWOWMwLTEuMS0uOS0yLTItMnptMCAydjJIOVY5aDEwem0tNiA2di0yaDJ2MmgtMnptMiAydjJoLTJ2LTJoMnptLTQtMkg5di0yaDJ2MnptNi0yaDJ2MmgtMnYtMnptLTggNGgydjJIOXYtMnptOCAydi0yaDJ2MmgtMnpNNiAxN0g1Yy0xLjEgMC0yLS45LTItMlY1YzAtMS4xLjktMiAyLTJoMTBjMS4xIDAgMiAuOSAyIDJ2MWgtMlY1SDV2MTBoMXYyelwiIH0pXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBpY29uOyIsIi8qKlxuICogQmxvY2sgZGVwZW5kZW5jaWVzXG4gKi9cbmltcG9ydCBpY29uIGZyb20gJy4vaWNvbic7XG5pbXBvcnQgJy4vc3R5bGUuc2Nzcyc7XG5cbi8qKlxuICogSW50ZXJuYWwgYmxvY2sgbGlicmFyaWVzXG4gKi9cbnZhciBfXyA9IHdwLmkxOG4uX187XG52YXIgcmVnaXN0ZXJCbG9ja1R5cGUgPSB3cC5ibG9ja3MucmVnaXN0ZXJCbG9ja1R5cGU7XG52YXIgX3dwID0gd3AsXG4gICAgU2VydmVyU2lkZVJlbmRlciA9IF93cC5zZXJ2ZXJTaWRlUmVuZGVyO1xuXG52YXIgYmxvY2tJZCA9ICdwcmVkaWNibG9ja3Mvc3BvcnRzLW9kZHMtdGFibGUnO1xuXG5yZWdpc3RlckJsb2NrVHlwZShibG9ja0lkLCB7XG4gIHRpdGxlOiBfXygnU3BvcnRzIG9kZHMgdGFibGUnLCAncHJlZGljLWJsb2NrcycpLFxuICBkZXNjcmlwdGlvbjogX18oJ1Nob3dzIG9kZHMgZm9yIHRvcCAxMCBnYW1lcyBvZiB1c2Vy4oCZcyBjaG9pY2UgZnJvbSBMaXZlIFNwb3J0cyBPZGRzIEFQSS4nLCAncHJlZGljLWJsb2NrcycpLFxuICBpY29uOiB7XG4gICAgYmFja2dyb3VuZDogJyNmYmIzNGInLFxuICAgIHNyYzogaWNvblxuICB9LFxuICBjYXRlZ29yeTogJ3dpZGdldHMnLFxuICBhdHRyaWJ1dGVzOiB7fSxcbiAgZWRpdDogZnVuY3Rpb24gZWRpdChfcmVmKSB7XG4gICAgdmFyIGF0dHJpYnV0ZXMgPSBfcmVmLmF0dHJpYnV0ZXM7XG5cbiAgICByZXR1cm4gd3AuZWxlbWVudC5jcmVhdGVFbGVtZW50KFNlcnZlclNpZGVSZW5kZXIsIHtcbiAgICAgIGJsb2NrOiBibG9ja0lkLFxuICAgICAgYXR0cmlidXRlczogYXR0cmlidXRlc1xuICAgIH0pO1xuICB9LFxuICAvLyBlbmQgZWRpdFxuICBzYXZlOiBmdW5jdGlvbiBzYXZlKCkge1xuICAgIC8vIFJlbmRlcmluZyBpbiBQSFBcbiAgICByZXR1cm4gbnVsbDtcbiAgfSxcblxuICBleGFtcGxlOiB7XG4gICAgYXR0cmlidXRlczoge1xuICAgICAgJ3ByZXZpZXcnOiB0cnVlXG4gICAgfVxuICB9XG59KTsiLCIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibWFwcGluZ3MiOiI7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7O0FDbEZBO0FBQUE7Ozs7Ozs7Ozs7Ozs7QUNBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7QUNaQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7QUM3Q0E7QUFBQTs7Ozs7Ozs7Ozs7O0FDQUE7Ozs7Ozs7Ozs7OztBQ0FBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7Ozs7QUNMQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7QUNaQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7OztBQzVDQTtBQUFBOzs7OztBIiwic291cmNlUm9vdCI6IiJ9

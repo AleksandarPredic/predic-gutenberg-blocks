@@ -19,11 +19,11 @@ registerBlockType(
     description: __('Shows odds for top 10 games of user’s choice from Live Sports Odds API.', 'predic-blocks'),
     icon: {
       background: '#fbb34b',
-      src: icon,
+      src: icon
     },
     category: 'widgets',
     attributes: {},
-    edit: function ({ attributes }) {
+    edit: ({ attributes }) => {
       return (
         <ServerSideRender
           block={blockId}
@@ -36,4 +36,9 @@ registerBlockType(
       // Rendering in PHP
       return null;
     },
+    example: {
+      attributes: {
+        'preview' : true
+      }
+    }
   });

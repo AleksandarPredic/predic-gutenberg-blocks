@@ -9,6 +9,6 @@ import BetCalculator from './modules/frontend/bet-calculator';
     for (const form of forms) {
       new BetCalculator(form);
     }
-  })
+  });
 
 })();
