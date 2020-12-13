@@ -20,11 +20,11 @@ registerBlockType(
     description: __('Calculate how much a bet returns for any given stake.', 'predic-blocks'),
     icon: {
       background: '#fbb34b',
-      src: icon,
+      src: icon
     },
     category: 'widgets',
     attributes: {},
-    edit: function ({ attributes }) {
+    edit: ({ attributes }) => {
       return (
         <ServerSideRender
           block={blockId}
@@ -36,5 +36,5 @@ registerBlockType(
     save() {
       // Rendering in PHP
       return null;
-    },
+    }
   });

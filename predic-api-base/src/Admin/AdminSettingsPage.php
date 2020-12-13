@@ -57,7 +57,7 @@ class AdminSettingsPage
      */
     private function __construct()
     {
-        $this->pluginSlug = PREDIC_BLOCKS_SLUG;
+        $this->pluginSlug = PREDIC_API_BASE_SLUG;
         $this->pageSlug = sprintf('%s-import', $this->pluginSlug);
         $this->optionGroup = sprintf('%s-api-settings', $this->pluginSlug);
         $this->optionSection = sprintf('%s-api-settings-section', $this->pluginSlug);

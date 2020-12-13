@@ -1,0 +1,13 @@
+{
+  "name": "predic-gutenber-project",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "main": "",
+  "scripts": {
+    "bundle-base": "dir-archiver --src ./predic-api-base --dest ./predic-api-base.zip --exclude README.md composer.json composer.lock",
+    "bundle-blocks": "cd ./predic-blocks && npm run-script build && cd ../ && dir-archiver --src ./predic-blocks --dest ./predic-blocks.zip --exclude ./blocks .stylelintrc.json .eslintrc README.md composer.json composer.lock node_modules package-lock.json package.json style.css.map"
+  },
+  "devDependencies": {
+    "dir-archiver": "^1.1.2"
+  }
+}

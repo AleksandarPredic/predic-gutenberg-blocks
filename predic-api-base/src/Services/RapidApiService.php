@@ -65,6 +65,11 @@ class RapidApiService implements ApiServiceInterface
         $transientKey .= $endpoint;
 
         $cachedData = get_transient($transientKey);
+        $cachedData = false;
+        throw new \Exception(
+            esc_html__('Something went wrong. Please try again later!', 'predic-api-base'),
+            500
+        );
 
         // Return cache
         if ($cachedData) {
@@ -78,7 +83,7 @@ class RapidApiService implements ApiServiceInterface
             ),
             $this->productionUrl . $endpoint
         );
-;
+
         $response = wp_remote_get(
             $url,
             [

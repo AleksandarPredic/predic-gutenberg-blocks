@@ -8,6 +8,7 @@ export default class BetCalculator {
 
   /**
    * Class constructor
+   *
    * @param {Object} calculator
    */
   constructor(calculator) {
@@ -23,7 +24,7 @@ export default class BetCalculator {
 
     // Trigger changes on select change
     this.oddsFormat.addEventListener('change', () => {
-      var event = new Event('input');
+      const event = new Event('input');
       this.inputs[0].dispatchEvent(event);
     });
 
@@ -50,7 +51,7 @@ export default class BetCalculator {
     for (const formGroup of formGroups) {
       const stake = formGroup.querySelector('.prblocks-bet-calc__odds-form-stake');
       const stakeValue = stake.value;
-      if (! stakeValue || isNaN(stakeValue)) {
+      if (!stakeValue || isNaN(stakeValue)) {
         this.handleMessage(messageStake);
         this.handleInputError(stake, true);
         return;
@@ -61,7 +62,7 @@ export default class BetCalculator {
       const odd = formGroup.querySelector('.prblocks-bet-calc__odds-form-odd');
       const oddValue = odd.value;
       const oddVerifiedValue = this.getOddValue(oddValue);
-      if (! odd || ! oddVerifiedValue) {
+      if (!odd || !oddVerifiedValue) {
         this.handleMessage(messageOdd);
         this.handleInputError(odd, true);
         return;
@@ -72,7 +73,7 @@ export default class BetCalculator {
       stakeOdds.push({
         stake: Number(stakeValue),
         odd: oddVerifiedValue
-      })
+      });
     }
 
     let sum = [];
@@ -85,6 +86,7 @@ export default class BetCalculator {
 
   /**
    * Add new fields to the form
+   *
    * @param {Event} event
    */
   clearFormGroups(event) {
@@ -99,10 +101,9 @@ export default class BetCalculator {
     // reset inputs and remove error class
     formGroups[0].querySelectorAll('input')
       .forEach(input => {
-          input.value = '';
-          this.handleInputError(input, false);
-        }
-      );
+        input.value = '';
+        this.handleInputError(input, false);
+      });
 
     // Handle case when no form groups are added
     if (formGroups.length < 2) {
@@ -110,7 +111,7 @@ export default class BetCalculator {
     }
 
     // Remove all added form groups
-    var i;
+    let i;
     for (i = 1; i < formGroups.length; i++) {
       formGroups[i].remove();
     }
@@ -118,6 +119,7 @@ export default class BetCalculator {
 
   /**
    * Add new fields to the form
+   *
    * @param {Event} event
    */
   addFormGroup(event) {
@@ -129,18 +131,16 @@ export default class BetCalculator {
     // Remove labels
     element.querySelectorAll('label')
       .forEach(label => {
-      label.remove();
-      }
-    );
+        label.remove();
+      });
 
     // Add input listeners, remove error css class for the clonned input
     element.querySelectorAll('input')
       .forEach(input => {
-          input.value = '';
-          this.handleInputError(input, false);
-          this.addInputListener(input);
-        }
-      );
+        input.value = '';
+        this.handleInputError(input, false);
+        this.addInputListener(input);
+      });
 
     this.formGroupsWrapper.insertAdjacentElement('beforeend', element);
 
@@ -148,6 +148,7 @@ export default class BetCalculator {
 
   /**
    * Add event listener for keypress
+   *
    * @param {Object} input
    */
   addInputListener(input) {
@@ -156,8 +157,9 @@ export default class BetCalculator {
 
   /**
    * Return number or decimal number OR false
+   *
    * @param {string} value
-   * @returns {boolean|*}
+   * @return {boolean|*}
    */
   getOddValue(value) {
     const oddsFormat = this.oddsFormat.value;
@@ -172,8 +174,7 @@ export default class BetCalculator {
         }
 
         return value;
-      }
-      catch(err) {
+      } catch (err) {
         return false;
       }
 
@@ -189,8 +190,7 @@ export default class BetCalculator {
         }
 
         return value;
-      }
-      catch(err) {
+      } catch (err) {
         return false;
       }
 
@@ -206,6 +206,7 @@ export default class BetCalculator {
 
   /**
    * Add or remove form message
+   *
    * @param {string} message
    */
   handleMessage(message) {
@@ -214,6 +215,7 @@ export default class BetCalculator {
 
   /**
    * Mark input incorrect or not
+   *
    * @param {Object} input
    * @param {boolean} error
    */
@@ -227,6 +229,7 @@ export default class BetCalculator {
 
   /**
    * Add or remove payot value
+   *
    * @param {string} value
    */
   handlePayout(value) {

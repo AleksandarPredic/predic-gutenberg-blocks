@@ -92,7 +92,8 @@ module.exports = {
     new StylelintPlugin({
       configFile: 'stylelintrc.json',
       files: [
-        './blocks/**/*.scss'
+        './blocks/**/*.scss',
+        './assets/scss/**/*.scss',
       ]
     })
   ],

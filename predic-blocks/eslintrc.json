@@ -28,7 +28,9 @@
     "no-unused-vars": 0,
     "semi": [2, "always"],
     "indent": ["error", 2, {"SwitchCase": 1}],
-    "prettier/prettier": 0
+    "prettier/prettier": 0,
+    "prefer-const": 0,
+    "jsdoc/require-returns-description": 0
   },
   "overrides": [
     {

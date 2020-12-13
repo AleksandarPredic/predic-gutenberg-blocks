@@ -66,12 +66,18 @@ class SportOddsTable implements DynamicBlockTemplateInterface
 
         // Fetch sports data from our central plugin
 
+        $errorMessage = esc_html__(
+            'There was an error and the Sports odds table can not be displayed!.',
+            'predic-blocks'
+        );
         $apiOddsData = apply_filters('predic_api_base_get_odds', 'uk', 'soccer_epl', 'h2h');
         if (is_wp_error($apiOddsData)) {
             $this->logger->log(
                 $apiOddsData->get_error_message(),
                 $apiOddsData->get_error_code()
             );
+
+            return $errorMessage;
             // TODO: What to do in case of error.
         }
 
@@ -81,6 +87,8 @@ class SportOddsTable implements DynamicBlockTemplateInterface
                 $apiSportsData->get_error_message(),
                 $apiSportsData->get_error_code()
             );
+
+            return $errorMessage;
             // TODO: What to do in case of error.
         }
 
