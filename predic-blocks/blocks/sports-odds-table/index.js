@@ -35,5 +35,10 @@ registerBlockType(
     save() {
       // Rendering in PHP
       return null;
+    },
+    example: {
+      attributes: {
+        'preview' : true
+      }
     }
   });
