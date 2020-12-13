@@ -43,12 +43,15 @@ class ScriptsGutenberg
         );
 
         // Enqueue optional editor only styles
+        /*
+         * TODO: Solve using multiple output css files with webpack 4 for mini-css-extract-plugin. For now we use style-loader
         wp_enqueue_style(
             'predic-blocks-editor-css',
             self::PLUGIN_URL . $style_path,
             [ ],
             filemtime(self::PLUGIN_DIR . $style_path)
         );
+        */
     }
 
     /**

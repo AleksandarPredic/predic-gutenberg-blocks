@@ -3,7 +3,6 @@ const webpack = require( 'webpack' );
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPluginBlocks = require('mini-css-extract-plugin');
-const MiniCssExtractPluginEditor = require('mini-css-extract-plugin');
 
 const production = 'production' === process.env.NODE_ENV;
 
@@ -73,7 +72,7 @@ module.exports = {
       {
         test: /editor\.s?css$/,
         use: [
-          MiniCssExtractPluginEditor.loader,
+          {loader: 'style-loader'},
           ...commonScssConfig
         ],
       },
@@ -82,9 +81,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPluginBlocks({
       filename: './assets/css/blocks.style.css',
-    } ),
-    new MiniCssExtractPluginEditor({
-      filename: './assets/css/blocks.editor.css',
     } ),
     new ESLintPlugin({
       overrideConfigFile: 'eslintrc.json',
