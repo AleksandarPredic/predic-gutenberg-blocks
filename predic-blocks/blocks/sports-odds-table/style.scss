@@ -1,32 +1,94 @@
 @import "../../assets/scss/variables";
 
 .prblocks-odds-table {
-  background-color: $color__white;
   width: 100%;
   max-width: 1440px !important;
   margin: 0 auto !important;
-  padding: 30px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__table {
+    background-color: $color__white;
+    padding: 30px;
+    margin: 30px;
+  }
+
+  &__match {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $border__grey;
+    }
+  }
 
   &__team {
+    padding: 0 15px;
+    width: 220px;
+
     > div {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      flex-direction: column;
+      padding: 0 25px 0 0;
 
       h5 {
         padding: 5px 0;
+        position: relative;
+        text-align: center;
 
         + h5 {
+          margin-top: 10px;
+
           &::before {
             content: 'VS';
-            position: relative;
+            position: absolute;
             width: 26px;
             margin: 0 10px;
             color: $color__grey;
+            left: 50%;
+            top: -14px;
+            transform: translate(-50%, 0);
+            font-size: 0.9rem;
           }
         }
       }
+    }
+
+    time {
+      font-size: 0.8rem;
+      color: $color__grey;
+      line-height: 1;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__team--home {
+    &::after {
+      content: '';
+      background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"24\"><path d=\"M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z\"/></svg>");
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:first-child::after {
+      left: -25px;
+    }
+
+    &:last-child::after {
+      right: -25px;
     }
   }
 
@@ -37,10 +99,14 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    flex: 1;
+    max-width: 100%;
 
     h6 {
       white-space: nowrap;
       text-align: center;
+      font-size: 0.95rem;
+      line-height: 1;
     }
 
     ul {
@@ -56,6 +122,19 @@
         text-align: center;
         padding: 0 5px;
         flex: 0 0 calc(100% / 3);
+
+        small {
+          font-size: 0.9rem;
+          line-height: 1;
+          margin: 5px 0;
+          color: $color__grey;
+        }
+
+        span {
+          font-size: 0.95rem;
+          line-height: 1;
+          font-weight: 500;
+        }
 
         small,
         span {
@@ -74,6 +153,66 @@
 
     &:not(:last-child) {
       margin-right: 10px;
+    }
+  }
+
+  &__filters {
+    padding: 30px 30px 0 30px;
+
+    form {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex-wrap: wrap;
+
+      > div {
+        padding-right: 15px;
+      }
+
+      select {
+        font-size: 1rem;
+      }
+
+      button.button {
+        font-size: 1rem;
+        padding: 11px 20px;
+      }
+    }
+  }
+
+  @media all and (max-width: $brakepoint__md-max) {
+    &__filters {
+      form {
+        div {
+          margin-bottom: 5px;
+          flex: 0 0 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: $brakepoint__sm-max) {
+    &__match {
+      flex-direction: column;
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__team {
+      flex: 0 0 100%;
+      width: 100%;
+      margin-bottom: 10px;
+
+      > div {
+        padding: 0;
+      }
+    }
+
+    &__odds {
+      flex: 0 0 100%;
     }
   }
 }

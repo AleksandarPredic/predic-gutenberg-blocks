@@ -180,7 +180,7 @@
     }
   }
 
-  @media all and (max-width: $brakepoint__md-max) {
+  @media all and (max-width: $brakepoint__sm-max) {
     max-width: 95% !important;
 
     &__odds-format {
