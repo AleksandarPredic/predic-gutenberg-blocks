@@ -3,6 +3,7 @@
   "extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
   "globals": {
     "wp": true,
+    "_sportsOddsTableData": true,
     "ajaxurl": false
   },
   "env": {
@@ -30,7 +31,8 @@
     "indent": ["error", 2, {"SwitchCase": 1}],
     "prettier/prettier": 0,
     "prefer-const": 0,
-    "jsdoc/require-returns-description": 0
+    "jsdoc/require-returns-description": 0,
+    "eqeqeq": 0
   },
   "overrides": [
     {

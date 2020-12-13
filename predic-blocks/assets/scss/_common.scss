@@ -1,0 +1,30 @@
+/**
+ * Loader
+ */
+.predic-blocks-loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.predic-blocks-loader::after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid $color__grey;
+  border-color: $color__grey transparent $color__grey transparent;
+  animation: predic-blocks-dual-ring 1.2s linear infinite;
+}
+
+@keyframes predic-blocks-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

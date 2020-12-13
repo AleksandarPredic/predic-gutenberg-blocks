@@ -1,4 +1,5 @@
 @import "../../assets/scss/variables";
+@import "../../assets/scss/common";
 
 .prblocks-odds-table {
   width: 100%;
@@ -14,6 +15,40 @@
     background-color: $color__white;
     padding: 30px;
     margin: 30px;
+    position: relative;
+  }
+
+  &__loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background__white-08;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    padding: 50px;
+
+    &--show {
+      display: flex;
+    }
+  }
+
+  &__message {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $color__red;
+    text-align: center;
+    line-height: 1.2;
+    padding: 15px;
+  }
+
+  &__matches {
+    display: block;
+    position: relative;
   }
 
   &__match {
@@ -43,6 +78,7 @@
         padding: 5px 0;
         position: relative;
         text-align: center;
+        margin: 0;
 
         + h5 {
           margin-top: 10px;
@@ -180,13 +216,23 @@
     }
   }
 
-  @media all and (max-width: $brakepoint__md-max) {
+  @media all and (max-width: $brakepoint__lg-max) and (min-width: $brakepoint__sm-min) {
     &__filters {
       form {
         div {
           margin-bottom: 5px;
-          flex: 0 0 100%;
-          text-align: right;
+          flex: 0 0 50%;
+          text-align: left;
+
+          &:last-child {
+            flex: 0 0 100%;
+            text-align: right;
+            margin-top: 10px;
+          }
+        }
+
+        select {
+          width: 100%;
         }
       }
     }
@@ -213,6 +259,16 @@
 
     &__odds {
       flex: 0 0 100%;
+    }
+
+    &__filters {
+      form {
+        div {
+          margin-bottom: 5px;
+          flex: 0 0 100%;
+          text-align: right;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
 <?php
 // Init the class method that will be called on the server side rendering
-\PredicBlocks\Blocks\Templates\SportOddsTable::getInstance()->registerDynamicBlock();
+$sportsBlocksTable = \PredicBlocks\Blocks\Templates\SportOddsTable::getInstance();
+$sportsBlocksTable->initAjaxHooks();
+$sportsBlocksTable->registerDynamicBlock();

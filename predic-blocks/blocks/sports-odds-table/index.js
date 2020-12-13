@@ -2,6 +2,7 @@
  * Block dependencies
  */
 import icon from './icon';
+import './editor.scss';
 import './style.scss';
 
 /**
