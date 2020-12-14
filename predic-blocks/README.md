@@ -74,6 +74,19 @@ Table uses the JavaScript to apply the filters, so the user experience is at hig
 	stylelintrc.json
 	webpack.config.js [Main plugin file]
 
+## Preview images
+
+### Bet calculator and recent bets table
+![Block editor](https://gutenberg.acapredic.com/github-images/bet-calculator-block-preview.png)
+
+![Block frontend](https://gutenberg.acapredic.com/github-images/bet-calculator-block.png)
+
+### Sports odds table
+![Block editor](https://gutenberg.acapredic.com/github-images/sports-odds-table-block-preview.png)
+
+![Block frontend](https://gutenberg.acapredic.com/github-images/sports-odds-table-block.png)
+
+
 ## Real world example
 As this is just an example, there are some tasks not done completely.
 
