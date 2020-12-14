@@ -24,7 +24,7 @@ That is all :) Happy codding!
 * Node.js v15 or above
 
 ## Dev Features
-* Dev JS and SCSS linters
+* Dev JS and SCSS linters. Build (not dev) bundle process will fail if any errors 
 * Webpack 4 for minification and dependency management
 * SCSS
 * ES6 syntax support for frontend JS files

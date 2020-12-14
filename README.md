@@ -31,6 +31,15 @@ you have no extra work to do.
 * Clone the repository
 * Visit each plugin folder and run `npm install` and `composer install`
 * Zip the plugin folders and upload them to your WP installation
+
+## Test ready plugin zip files
+If you just want to upload you files and play, but don't want to run all this commands, then
+you are all set :) 
+
+In the repository root directory we already included both plugin files, ready for the upload 
+to your WP installation. Just upload these files:
+* predic-api-base.zip
+* predic-blocks.zip
   
 ## Plugin descriptions
 Each plugin folder contains its own readme file with precise instructions and descriptions.
@@ -47,6 +56,7 @@ Each plugin folder contains its own readme file with precise instructions and de
     .php_cs
     package.json
     package-lock.json
-    README.md
+    predic-api-base.zip [Plugin zip ready for upload]
+    predic-blocks.zip [Plugin zip ready for upload]
 
 
