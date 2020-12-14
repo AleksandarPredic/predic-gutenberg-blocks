@@ -1,0 +1,36 @@
+## Theme support
+This plugin was created for the default WP theme [Twenty Twenty-One](https://wordpress.org/themes/twentytwentyone/)  and is not guaranteed 
+that it will look good on other themes.
+
+## Dev Features
+* Dev JS and SCSS linters
+
+## Plugin features and descriptions
+
+### Bet calculator
+Being able to calculate how much a bet returns for any given stake is one of the basics of betting and
+for that we need a Bet Calculator to simplify this process for our users. This is why the Bet calculator is developed.
+
+It allows the user to calculate multiple bets using different odds formats.
+
+#### Recent bets
+This is a table, a part of the Bet calculator block, that sits below the calculator
+and allows the user to see all his recent bets. 
+
+When the user clicks on the `Clear` button in the calculator, this table will start
+logging the new bets row. That way the user can see all his bets grouped by the payout.
+
+### Sports odds table
+Shows odds for top 10 games of user’s choice from Live Sports Odds API. 
+
+User can use the filters to search: sport, region, market and team.
+Table uses the JavaScript to apply the filters, so the user experience is at high level.
+
+## Real world example
+As this is just an example, there are some tasks not done completely.
+
+#### Here is a list of what needs to be finalizes when there is more time:
+* Handle client side blocks re-rendering to avoid page cache problems
+* Add Schema.org objects for the Sports odds table block
+* Solve using multiple output css files with webpack 4 for mini-css-extract-plugin
+* Extract translations

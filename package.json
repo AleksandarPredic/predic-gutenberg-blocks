@@ -4,7 +4,6 @@
   "license": "GPL-2.0-or-later",
   "main": "",
   "scripts": {
-    "composer": "cd ./predic-api-base && composer-runner -- install --no-dev --optimize-autoloader",
     "bundle-base": "cd ./predic-api-base && composer-runner -- install --no-dev --optimize-autoloader && cd ../ && dir-archiver --src ./predic-api-base --dest ./predic-api-base.zip --exclude README.md composer.json composer.lock bin tests .phpcs.xml.dist .travis.yml phpunit.xml.dist",
     "bundle-blocks": "cd ./predic-blocks && composer-runner -- install --no-dev --optimize-autoloader && npm run-script build && cd ../ && dir-archiver --src ./predic-blocks --dest ./predic-blocks.zip --exclude blocks .stylelintrc.json .babelrc README.md composer.json composer.lock node_modules package-lock.json package.json style.css.map webpack.config.js stylelintrc.json eslintrc.json"
   },
