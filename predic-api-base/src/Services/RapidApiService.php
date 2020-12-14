@@ -2,6 +2,7 @@
 
 namespace PredicApiBase\Services;
 
+use PredicApiBase\Contracts\ApiRemoteGetRequestInterface;
 use PredicApiBase\Contracts\ApiServiceInterface;
 use PredicApiBase\Data\Models\SettingsModel;
 use PredicApiBase\ValueObjects\ApiResponse;
@@ -15,31 +16,41 @@ class RapidApiService implements ApiServiceInterface
 {
 
     // TODO: Change this to one hour
-    protected const CACHE_DURATION = MONTH_IN_SECONDS;
+    private const CACHE_DURATION = MONTH_IN_SECONDS;
 
     /**
      * Production API endpoint
      * @var string
      */
-    protected $productionUrl;
+    private $productionUrl;
 
     /**
      * API key
      * @var string
      */
-    protected $xRapidApiKey;
+    private $xRapidApiKey;
 
     /**
      * API host
      * @var string
      */
-    protected $xRapidApiHost;
+    private $xRapidApiHost;
+
+    /**
+     * Preform remote Get request
+     * @var ApiRemoteGetRequestInterface
+     */
+    private $remoteGetRequest;
 
     /**
      * RapidApiService constructor.
+     *
+     * @param ApiRemoteGetRequestInterface $remoteGetRequest
      */
-    public function __construct()
+    public function __construct(ApiRemoteGetRequestInterface $remoteGetRequest)
     {
+        $this->remoteGetRequest = $remoteGetRequest;
+
         $model = SettingsModel::getInstance();
         $this->productionUrl = 'https://odds.p.rapidapi.com/v1/';
         $this->xRapidApiKey = $model->getApiKey();
@@ -79,7 +90,7 @@ class RapidApiService implements ApiServiceInterface
             $this->productionUrl . $endpoint
         );
 
-        $response = wp_remote_get(
+        $response = $this->remoteGetRequest->get(
             $url,
             [
                 'headers' => [
