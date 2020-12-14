@@ -89,11 +89,11 @@ class BetCalculator implements DynamicBlockTemplateInterface
                         <div class="prblocks-bet-calc__odds-form-groups-wrapper">
                             <div class="prblocks-bet-calc__odds-form-group">
                                 <div class="prblocks-bet-calc__odds-form-field">
-                                    <label>%4$s</label>
+                                    <label class="prblocks-bet-calc__odds-form-label-stake">%4$s</label>
                                     <input type="text" placeholder="%5$s" class="prblocks-bet-calc__odds-form-stake">
                                 </div>
                                 <div class="prblocks-bet-calc__odds-form-field">
-                                    <label>%6$s</label>
+                                    <label class="prblocks-bet-calc__odds-form-label-odd">%6$s</label>
                                     <input type="text" placeholder="%7$s" class="prblocks-bet-calc__odds-form-odd">
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ class BetCalculator implements DynamicBlockTemplateInterface
                         </div>
                         <div class="prblocks-bet-calc__odds-form-result">
                             <span>%10$s</span>
-                            <div><span>%11$s</span><span class="prblocks-bet-calc__odds-form-payout">0.00</span></div>
+                            <div><span class="prblocks-bet-calc__odds-form-currency">%11$s</span><span class="prblocks-bet-calc__odds-form-payout">0.00</span></div>
                         </div>
                     </div>
                 </div>
@@ -142,6 +142,19 @@ class BetCalculator implements DynamicBlockTemplateInterface
                     ]
                 )
             )//%13$s
+        );
+
+        // Add recent bets table
+        $html .= sprintf(
+            '<section class="prblocks-bet-calc-bets">
+                <header>
+                    <h4>%1$s</h4>
+                </header>
+                <div class="prblocks-bet-calc-bets__table">
+                    <div></div>
+                </div>
+            </section>',
+            esc_html__('Recent bets', 'predic-blocks') // %1$s
         );
 
         return $html;

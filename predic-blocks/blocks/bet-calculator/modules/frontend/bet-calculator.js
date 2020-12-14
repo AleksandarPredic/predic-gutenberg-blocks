@@ -1,5 +1,6 @@
 import oddslib from 'oddslib';
 import debounce from "./debounce";
+import RecentBets from './recent-bets';
 
 /**
  * Bet caclulator class
@@ -36,6 +37,9 @@ export default class BetCalculator {
 
     // Clear added fields and input values
     this.calculator.querySelector('.prblocks-bet-calc__odds-form-clear').addEventListener('click', this.clearFormGroups.bind(this));
+
+    // Init recent bets table
+    this.recentBetsTable = new RecentBets(this.calculator);
   }
 
   /**
@@ -47,6 +51,7 @@ export default class BetCalculator {
     const formGroups = this.calculator.querySelectorAll('.prblocks-bet-calc__odds-form-group');
 
     // Collect all inputs so we can calculate sum
+    let stakeOddsRawValues = [];
     let stakeOdds = [];
     for (const formGroup of formGroups) {
       const stake = formGroup.querySelector('.prblocks-bet-calc__odds-form-stake');
@@ -70,6 +75,12 @@ export default class BetCalculator {
       this.handleMessage('');
       this.handleInputError(odd, false);
 
+      // Collect raw values for the recent bets table
+      stakeOddsRawValues.push({
+        stake: stakeValue,
+        odd: oddValue
+      });
+
       stakeOdds.push({
         stake: Number(stakeValue),
         odd: oddVerifiedValue
@@ -81,7 +92,12 @@ export default class BetCalculator {
       sum.push(stakeOdd.stake * stakeOdd.odd);
     }
 
-    this.handlePayout(sum.reduce((a, b) => a + b, 0).toFixed(2));
+    // Display payout sum
+    const payout = sum.reduce((a, b) => a + b, 0).toFixed(2);
+    this.handlePayout(payout);
+
+    // Fill in the recent bets table
+    this.recentBetsTable.displayBets(stakeOddsRawValues, payout);
   }
 
   /**
@@ -115,6 +131,9 @@ export default class BetCalculator {
     for (i = 1; i < formGroups.length; i++) {
       formGroups[i].remove();
     }
+
+    // Switch to new row in the recent bets table
+    this.recentBetsTable.setNextRow();
   }
 
   /**

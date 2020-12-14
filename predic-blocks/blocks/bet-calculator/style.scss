@@ -189,3 +189,78 @@
     }
   }
 }
+
+.prblocks-bet-calc-bets {
+  background-color: $background__blueish;
+  width: 100%;
+  max-width: 700px !important;
+  margin: 30px auto !important;
+  padding: 30px;
+
+  header {
+    h4 {
+      font-size: 1.1rem;
+      line-height: 1.2;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__table {
+    table {
+      margin: 0;
+      padding: 0;
+      border: 1px solid $border__grey;
+      width: auto !important;
+      min-width: 120px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      th {
+        font-size: 0.9rem;
+        font-weight: bold;
+        line-height: 1;
+        padding: 5px;
+        text-align: center;
+        color: $color__text;
+        border: 1px solid $color__black;
+      }
+
+      td {
+        font-size: 0.9rem;
+        line-height: 1;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid $color__black;
+        color: $color__text;
+      }
+    }
+
+    > div {
+      border-bottom: 1px solid $border__grey;
+      padding: 5px 0 10px 0;
+      margin: 0 0 10px 0;
+
+      > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1rem;
+        flex: 0 0 100%;
+        color: $color__text;
+        margin: 5px 0 0 0;
+      }
+    }
+  }
+}
