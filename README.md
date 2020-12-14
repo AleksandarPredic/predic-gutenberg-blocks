@@ -33,7 +33,8 @@ you have no extra work to do.
   
 ## Plugin descriptions
 Each plugin folder contains its own readme file with precise instructions and descriptions.
-* [Predic API Base plugin](predic-api-base/README.md)
-* [Gutenberg custom blocks plugin](predic-blocks/README.md)
+
+* [Predic API Base plugin](predic-api-base/)
+* [Gutenberg custom blocks plugin](predic-blocks/)
 
 
