@@ -204,8 +204,7 @@ class SportOddsTable implements DynamicBlockTemplateInterface, DynamicBlockAjaxT
      */
     public function ajaxRender()
     {
-        // TODO: Uncomment this
-        //check_ajax_referer(self::AJAX_ACTION, 'check');
+        check_ajax_referer(self::AJAX_ACTION, 'check');
 
         if (
             (! isset($_POST['sport']) || empty($_POST['sport']))

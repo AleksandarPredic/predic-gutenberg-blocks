@@ -14,9 +14,8 @@ use PredicApiBase\ValueObjects\ApiResponse;
  */
 class RapidApiService implements ApiServiceInterface
 {
-
-    // TODO: Change this to one hour
-    private const CACHE_DURATION = MONTH_IN_SECONDS;
+    
+    private const CACHE_DURATION = HOUR_IN_SECONDS;
 
     /**
      * Production API endpoint
