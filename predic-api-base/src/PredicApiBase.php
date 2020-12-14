@@ -8,6 +8,7 @@ use PredicApiBase\I18n\I18n;
 use PredicApiBase\Services\ApiOddsService;
 use PredicApiBase\Services\ApiSportsService;
 use PredicApiBase\Services\RapidApiService;
+use PredicApiBase\Services\RemoteGetRequest;
 use PredicApiBase\Traits\SingletonTrait;
 
 class PredicApiBase
@@ -35,7 +36,9 @@ class PredicApiBase
 
         // Global filters for other plugins to use
 
-        $apiService = new RapidApiService();
+        $apiService = new RapidApiService(
+            new RemoteGetRequest()
+        );
 
         /**
          * Odds API service for other plugins or themes

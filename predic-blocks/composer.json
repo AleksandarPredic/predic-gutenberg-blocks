@@ -1,5 +1,5 @@
 {
-  "name": "predic-blocks",
+  "name": "predic/blocks",
   "description": "Gutenberg custom blocks",
   "minimum-stability": "dev",
   "license": "proprietary",
