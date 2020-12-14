@@ -1,3 +1,7 @@
+# Base API plugin
+This plugin is created separately, so it can be used as a base for an API requests for our themes
+and plugins.
+
 ## Configuration
 Install plugin via WP Admin interface and then visit the WP Admin settings page 
 ` Settings -> Predic API Settings` to fill in the `API key` and `API host` data.
@@ -12,6 +16,14 @@ That is all :) Happy codding!
 * Composer
 
 ## Features
+
+## No direct class calls in other plugins
+For the API calls in other plugins we use `filters` so in case our plugin is deactivated or 
+we change a Class name, nothing will happen, and we don't need additional refactor.
+
+To get data use this filters in other themes or plugins:
+* `apply_filters('predic_api_base_get_odds', $region, $sport, $market);`
+* `apply_filters('predic_api_base_get_sports', null);`
 
 ### Admin settings page for API key and host
 Under WP Admin settings menu, `Settings -> Predic API Settings`, you need to enter you API key and API host for the RapidAPI.

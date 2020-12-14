@@ -1,3 +1,10 @@
+# Custom Gutengerg blocks plugin
+This plugin adds two custom blocks to the Gutenberg editor:
+* Bet calculator with recent bets table
+* Sports odds table
+
+Those are two separate blocks.
+
 ## Theme support
 This plugin was created for the default WP theme [Twenty Twenty-One](https://wordpress.org/themes/twentytwentyone/)  and is not guaranteed 
 that it will look good on other themes.
@@ -56,6 +63,7 @@ Table uses the JavaScript to apply the filters, so the user experience is at hig
 	├── sports-odds-table/
 	languages/ [translation files]
 	src/ [PHP namespace with autoloader]
+	├──Blocks/ [Blocks PHP files for dynamic rendering]
 	.babelrc
 	composer.json
 	eslintrc.json
