@@ -9,6 +9,7 @@ into the Gutenberg blocks.
 * Active Gutenberg editor (Not disabled)
 * PHP: 7.2 or above
 * Composer autoloader dependency
+* Node package manager
 
 ## Development process
 * Clone the repository
@@ -36,5 +37,16 @@ Each plugin folder contains its own readme file with precise instructions and de
 
 * [Predic API Base plugin](predic-api-base/)
 * [Gutenberg custom blocks plugin](predic-blocks/)
+
+## Files
+
+    predic-api-base/ [API base files]
+    predic-blocks/ [Blocks plugin files]
+    .editorconfig
+    .gitignore
+    .php_cs
+    package.json
+    package-lock.json
+    README.md
 
 

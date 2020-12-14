@@ -2,6 +2,15 @@
 Install plugin via WP Admin interface and then visit the WP Admin settings page 
 ` Settings -> Predic API Settings` to fill in the `API key` and `API host` data.
 
+## Installation
+* Run `composer install`
+
+That is all :) Happy codding!
+
+## Dev dependencies
+* PHP: 7.2 or above
+* Composer
+
 ## Features
 
 ### Admin settings page for API key and host
@@ -27,6 +36,19 @@ Follow this steps to run unit tests (Linux):
 * Run tests with `./vendor/bin/phpunit` or use an alias of your choice
 
 If you have problems setting up the tests, here are the [docs](https://make.wordpress.org/cli/handbook/misc/plugin-unit-tests/) 
+
+## Files
+
+	bin/ [WP Unit tests bin]
+	├── languages/ [translation files]
+	├── src/ [PHP namespace with autoloader]
+	├── tests/ [WP Unit tests]
+	.phpcs.xml.dist
+	.travis.yml
+	composer.json
+	phpunit.xml.dist
+	predic-api-base.php [Main plugin file]
+	README.md
 
 ## Real world example
 As this is just an example, there are some tasks not done completely.

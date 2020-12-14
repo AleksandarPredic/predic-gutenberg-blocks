@@ -2,8 +2,26 @@
 This plugin was created for the default WP theme [Twenty Twenty-One](https://wordpress.org/themes/twentytwentyone/)  and is not guaranteed 
 that it will look good on other themes.
 
+## Installation
+* Run `composer install`
+* Run `npm install`
+* Run `npm run dev` to start watching the files
+* Run `npm run build` to build the bundle files for the production
+
+That is all :) Happy codding!
+
+## Dev dependencies
+* PHP: 7.2 or above
+* Composer
+* Node package manager
+* Node.js v15 or above
+
 ## Dev Features
 * Dev JS and SCSS linters
+* Webpack 4 for minification and dependency management
+* SCSS
+* ES6 syntax support for frontend JS files
+* JS and CSS source maps
 
 ## Plugin features and descriptions
 
@@ -25,6 +43,28 @@ Shows odds for top 10 games of user’s choice from Live Sports Odds API.
 
 User can use the filters to search: sport, region, market and team.
 Table uses the JavaScript to apply the filters, so the user experience is at high level.
+
+## Files
+
+	assets/ 
+	assets/
+	├── css/ [Auto-generated styles bundle]
+	├── js/ [Auto-generated JS bundle]
+	├── scss/
+	blocks/ [Gutenberg blocks files]
+	├── bet-calculator/
+	├── sports-odds-table/
+	languages/ [translation files]
+	src/ [PHP namespace with autoloader]
+	.babelrc
+	composer.json
+	eslintrc.json
+	package.json
+	package-lock.json
+	predic-blocks.php
+	README.md
+	stylelintrc.json
+	webpack.config.js [Main plugin file]
 
 ## Real world example
 As this is just an example, there are some tasks not done completely.
