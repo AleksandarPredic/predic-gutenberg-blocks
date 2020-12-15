@@ -1,5 +1,6 @@
 # Custom Gutengerg blocks plugin
 This plugin adds two custom blocks to the Gutenberg editor:
+
 * Bet calculator with recent bets table
 * Sports odds table
 
@@ -53,7 +54,6 @@ Table uses the JavaScript to apply the filters, so the user experience is at hig
 
 ## Files
 
-	assets/ 
 	assets/
 	├── css/ [Auto-generated styles bundle]
 	├── js/ [Auto-generated JS bundle]
