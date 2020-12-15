@@ -90,7 +90,8 @@ Table uses the JavaScript to apply the filters, so the user experience is at hig
 ## Real world example
 As this is just an example, there are some tasks not done completely.
 
-#### Here is a list of what needs to be finalizes when there is more time:
+Here is a list of what needs to be finalizes when there is more time:
+
 * Handle client side blocks re-rendering to avoid page cache problems
 * Add Schema.org objects for the Sports odds table block
 * Solve using multiple output css files with webpack 4 for mini-css-extract-plugin

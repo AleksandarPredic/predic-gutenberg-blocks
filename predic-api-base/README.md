@@ -46,7 +46,7 @@ Follow this steps to run unit tests (Linux):
 * Run `composer install`
 * Run `cd {path to this plugin dir}`
 * Run `bash bin/install-wp-tests.sh wordpress_test root '' localhost latest`.
-  Replace “root” with the username of your database and replace ” with the database password. Also replace “localhost” with the hostname of your database.
+  Replace “root” with the username of your database and replace '' with the database password. Also replace “localhost” with the hostname of your database.
 * Run tests with `./vendor/bin/phpunit` or use an alias of your choice
 
 If you have problems setting up the tests, here are the [docs](https://make.wordpress.org/cli/handbook/misc/plugin-unit-tests/) 
@@ -67,6 +67,7 @@ If you have problems setting up the tests, here are the [docs](https://make.word
 ## Real world example
 As this is just an example, there are some tasks not done completely.
 
-#### Here is a list of what needs to be finalizes when there is more time:
+Here is a list of what needs to be finalizes when there is more time:
+
 * Cover all classes with WP unit tests
 * Extract translations
