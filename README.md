@@ -5,18 +5,18 @@ This projects represents an example of building plugins using external API servi
 into the Gutenberg blocks.
 
 ## Dependencies
-* WordPress (the lates version, the better)
+* WordPress (the latest version, the better)
 * Active Gutenberg editor (Not disabled)
 * PHP: 7.2 or above
-* Composer autoloader dependency
+* Composer autoloader
 * Node package manager
 
 ## Development process
 * Clone the repository
 * Run `npm install`
-* Visit every plugin README.md file and follow the instructions for the installation.
+* Visit every plugin README.md file and follow the instructions for the installation
 * The advice is to use Symbolic links to link the folders to the external WP installation and not to copy the 
-whole repository to the wp-content/plugins directory.
+whole repository to the wp-content/plugins directory
   
 ## Generate plugin zip file for the production
 * Run `npm run bundle-base` and the file `predic-api-base.zip` will be generated 
@@ -38,6 +38,7 @@ you are all set :)
 
 In the repository root directory we already included both plugin files, ready for the upload 
 to your WP installation. Just upload these files:
+
 * predic-api-base.zip
 * predic-blocks.zip
   
