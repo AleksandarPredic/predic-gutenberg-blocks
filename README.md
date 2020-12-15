@@ -41,8 +41,8 @@ to your WP installation. Just upload these files:
 * predic-api-base.zip
 * predic-blocks.zip
   
-## Plugin descriptions
-Each plugin folder contains its own readme file with precise instructions and descriptions.
+## Plugin descriptions and installation instructions
+Each plugin folder contains its own readme file with precise instructions and descriptions. Please visit each to learn more detalis.
 
 * [Predic API Base plugin](predic-api-base/)
 * [Gutenberg custom blocks plugin](predic-blocks/)
