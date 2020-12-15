@@ -17,11 +17,12 @@ That is all :) Happy codding!
 
 ## Features
 
-## No direct class calls in other plugins
+### No direct class calls in other plugins
 For the API calls in other plugins we use `filters` so in case our plugin is deactivated or 
 we change a Class name, nothing will happen, and we don't need additional refactor.
 
 To get data use this filters in other themes or plugins:
+
 * `apply_filters('predic_api_base_get_odds', $region, $sport, $market);`
 * `apply_filters('predic_api_base_get_sports', null);`
 
@@ -36,8 +37,8 @@ blocks plugin will not work properly.
 
 ### Transient cache for API requests 
 Every API request will be cached for an hour. This applies only for the one combination of 
-sport, market and region. If this combination changes, the API will make a new request and cache it for the 
-given combination. Every combination will create it's own cache and will last an hour.
+sport, market and region. If this combination changes, the API will make a new request and cache it for that 
+given combination. Every combination will create its own cache and will last an hour.
 
 ## WP Unit Tests
 Follow this steps to run unit tests (Linux):
