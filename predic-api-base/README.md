@@ -42,6 +42,7 @@ given combination. Every combination will create its own cache and will last an 
 
 ## WP Unit Tests
 Follow this steps to run unit tests (Linux):
+
 * Run `composer install`
 * Run `cd {path to this plugin dir}`
 * Run `bash bin/install-wp-tests.sh wordpress_test root '' localhost latest`.
